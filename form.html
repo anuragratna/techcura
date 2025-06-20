@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form | Techcura</title>
+    <link rel="icon" type="image/png" href="assets/images/t_logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <div class="flex flex-col items-center mb-6">
+            <img src="assets/images/t_logo.png" alt="Techcura Logo" class="h-16 w-16 mb-2">
+            <h1 class="text-2xl font-bold text-indigo-600">Contact Form</h1>
+            <p class="text-gray-600 text-center text-sm mt-1">Fill out the form and we'll get back to you soon.</p>
+        </div>
+        <form action="https://formspree.io/f/movwnlvr" method="POST" class="space-y-5" id="contactForm">
+            <div>
+                <label for="name" class="block text-gray-700 font-medium mb-1">Name</label>
+                <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label for="contact" class="block text-gray-700 font-medium mb-1">Contact Number</label>
+                <input type="tel" id="contact" name="contact" required pattern="[0-9\-\+\s]+" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label for="company" class="block text-gray-700 font-medium mb-1">Company Name</label>
+                <input type="text" id="company" name="company" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Submit</button>
+        </form>
+        <div id="successMsg" class="hidden mt-4 text-green-600 text-center font-semibold">Thank you! Your submission has been received.</div>
+    </div>
+    <script>
+        // Optional: Show a success message after submission (for AJAX or Formspree redirect)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // For Formspree, the default redirect is fine, but you can use AJAX for a better UX
+            // e.preventDefault();
+            // document.getElementById('successMsg').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html> 
