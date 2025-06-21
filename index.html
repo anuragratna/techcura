@@ -140,58 +140,62 @@
             </div>
         </section>
 
-        <!-- Services Section (formerly Features) -->
+        <!-- Services Section -->
         <section id="services" class="py-16 px-4 md:py-24 bg-surface rounded-xl m-4 shadow-lg">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Core Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1: 24/7 Expert Support -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-indigo-500 text-4xl mb-4 text-center">⏰</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">24/7 Expert Support</h3>
-                        <p class="text-gray-600 text-center">
-                            Round-the-clock professional assistance for all your IT needs, whenever you need it.
-                        </p>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Core Services</h2>
+                    <p class="text-lg text-secondary mt-2">A Tiered Approach to Fit Your Business Needs</p>
+                </div>
+                
+                <div class="space-y-12">
+                    <!-- Tier 1 -->
+                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-indigo-500">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Tier 1: Basic IT Support</h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                            <li>IT Support & Helpdesk Services (remote and onsite)</li>
+                            <li>Office & Facility IT Support (Wi-Fi, cabling, printers, etc.)</li>
+                            <li>First-line technical troubleshooting</li>
+                            <li>User management and onboarding/offboarding</li>
+                        </ul>
                     </div>
-                    <!-- Service Card 2: Hardware & Networking -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-green-500 text-4xl mb-4 text-center">💻</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Hardware & Networking</h3>
-                        <p class="text-gray-600 text-center">
-                            Comprehensive support for your physical IT infrastructure and network connectivity.
-                        </p>
+
+                    <!-- Tier 2 -->
+                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-green-500">
+                        <h3 class="text-2xl font-bold text-green-700 mb-4">Tier 2: Infrastructure Support</h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                            <li>Infrastructure Management (servers, network, firewalls, AD)</li>
+                            <li>Network and device configuration</li>
+                            <li>Domain and access control (Active Directory setup and maintenance)</li>
+                            <li>Onsite infrastructure monitoring and escalation resolution</li>
+                        </ul>
                     </div>
-                    <!-- Service Card 3: Application Maintenance -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-yellow-500 text-4xl mb-4 text-center">⚙️</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Application Maintenance</h3>
-                        <p class="text-gray-600 text-center">
-                            Ensuring your critical applications run smoothly and are always up-to-date.
-                        </p>
+
+                    <!-- Tier 3 -->
+                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-red-500">
+                        <h3 class="text-2xl font-bold text-red-700 mb-4">Tier 3: Advanced IT & Cybersecurity</h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                            <li>Advanced Server & Application Support (performance tuning, patching)</li>
+                            <li>Cloud & Backup Solutions (Office 365, Google Workspace, AWS)</li>
+                            <li>Cybersecurity Services (endpoint protection, firewalls, threat detection, compliance)</li>
+                            <li>Hybrid and On-prem/cloud IT environment support</li>
+                            <li>Vulnerability assessments and mitigation strategies</li>
+                        </ul>
                     </div>
-                    <!-- Service Card 4: Cybersecurity Solutions -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-red-500 text-4xl mb-4 text-center">🛡️</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Cybersecurity Solutions</h3>
-                        <p class="text-gray-600 text-center">
-                            Protecting your business from evolving cyber threats with robust security measures.
-                        </p>
-                    </div>
-                    <!-- Service Card 5: Server Operations -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-blue-500 text-4xl mb-4 text-center">🖥️</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Server Operations</h3>
-                        <p class="text-gray-600 text-center">
-                            Reliable management and maintenance of your essential server infrastructure.
-                        </p>
-                    </div>
-                    <!-- Service Card 6: IT Performance & Productivity -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="text-purple-500 text-4xl mb-4 text-center">🚀</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Enhanced Performance</h3>
-                        <p class="text-gray-600 text-center">
-                            Optimizing your IT environment to boost efficiency and ensure continuous productivity.
-                        </p>
+                </div>
+
+                <!-- Additional Managed Services -->
+                <div class="mt-16">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Additional Managed Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3">IT Asset Management</h4>
+                            <p class="text-secondary">Inventory tracking, lifecycle management, warranty tracking, and usage monitoring of your IT assets. Gain full visibility and control over your hardware and software.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3">IT Procurement Services</h4>
+                            <p class="text-secondary">From laptops and routers to licensed software and cloud services, we help you choose the right technology, negotiate with vendors, and manage procurement logistics.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -277,10 +281,10 @@
                     Ready to eliminate your IT headaches? Contact us today to learn how Techcura can support your business.
                 </p>
                 <p class="text-xl font-semibold text-indigo-600">
-                    Email: <a href="mailto:connect@techcura.services" class="hover:underline">connect@techcura.services</a>
+                    <a href="mailto:connect@techcura.services" class="hover:underline">connect@techcura.services</a>
                 </p>
                 <p class="text-xl font-semibold text-indigo-600 mt-4">
-                    Phone: <a href="tel:+31-XXX-XXXXXXX" class="hover:underline">+31 683540581/a>
+                    <a href="tel:+31-XXX-XXXXXXX" class="hover:underline">+31 683540581</a>
                 </p>
             </div>
         </section>
