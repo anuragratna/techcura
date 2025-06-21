@@ -91,7 +91,7 @@
     }
     </script>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; form-action 'self' https://formspree.io;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io;">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -147,13 +147,11 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative text-white py-20 px-4 md:py-32 flex items-center justify-center rounded-xl m-4 shadow-lg overflow-hidden">
-            <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
-            <img src="assets/images/hero-background.jpg" alt="Modern IT Infrastructure" class="absolute inset-0 w-full h-full object-cover">
-            <div class="relative z-20 container mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6" data-i18n="hero.title"></h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90" data-i18n="hero.subtitle"></p>
-                <a href="#services" class="bg-link-blue text-white hover:bg-opacity-90 px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 transform hover:scale-105" data-i18n="hero.button"></a>
+        <section id="home" class="text-center py-20 px-4 md:py-32">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-primary-text" data-i18n="hero.title"></h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-secondary-text" data-i18n="hero.subtitle"></p>
+                <a href="#services" class="bg-link-blue text-white hover:bg-opacity-90 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 transform hover:scale-105" data-i18n="hero.button"></a>
             </div>
         </section>
 
