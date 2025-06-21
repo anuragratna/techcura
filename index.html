@@ -32,31 +32,25 @@
         theme: {
           extend: {
             colors: {
-              primary: '#2563eb', // blue-600
-              secondary: '#64748b', // slate-500
-              accent: '#38bdf8', // sky-400
-              background: '#f8fafc', // slate-50
-              surface: '#ffffff', // white
-              subtle: '#e2e8f0', // slate-200
+              'background': '#FFFFFF',
+              'primary-text': '#1D1D1F',
+              'secondary-text': '#6E6E73',
+              'link-blue': '#0071E3',
+              'divider': '#D2D2D7',
             },
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
             },
           },
         },
       }
     </script>
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Inter (Fallback, no longer primary) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Helvetica+Neue&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/t_logo.png">
-    <style>
-        /* Apply Inter font family to the whole body */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Schema Markup for Local Business -->
     <script type="application/ld+json">
@@ -97,32 +91,32 @@
     }
     </script>
 </head>
-<body class="bg-background text-secondary font-sans">
+<body class="bg-background text-primary-text font-sans">
 
     <!-- Header/Navigation Bar -->
-    <header class="bg-surface shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
+    <header class="bg-background/80 backdrop-blur-lg shadow-sm p-4 sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center px-4">
             <!-- Brand Logo/Name -->
-            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-primary rounded-md p-2">
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-primary-text rounded-md p-2">
                 <span>Techcura</span>
-                <span class="ml-2 text-base font-medium text-secondary" data-i18n="navigation.brandTagline"></span>
+                <span class="ml-2 text-base font-medium text-secondary-text" data-i18n="navigation.brandTagline"></span>
             </a>
             <!-- Navigation Links -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2" data-i18n="navigation.home"></a>
-                <a href="#services" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2" data-i18n="navigation.services"></a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 transition duration-300 rounded-md p-2" data-i18n="navigation.howItWorks"></a>
-                <a href="#about" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2" data-i18n="navigation.about"></a>
-                <a href="#contact" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2" data-i18n="navigation.contact"></a>
+                <a href="#home" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.home"></a>
+                <a href="#services" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.services"></a>
+                <a href="#how-it-works" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.howItWorks"></a>
+                <a href="#about" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.about"></a>
+                <a href="#contact" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.contact"></a>
                 <!-- Language Switcher -->
-                <div class="lang-switcher flex items-center border-l border-gray-300 ml-4 pl-4">
-                    <button data-lang="en" class="text-sm text-secondary hover:text-primary">EN</button>
-                    <span class="text-sm text-gray-400 mx-1">|</span>
-                    <button data-lang="nl" class="text-sm text-secondary hover:text-primary">NL</button>
+                <div class="lang-switcher flex items-center border-l border-divider ml-4 pl-4">
+                    <button data-lang="en" class="text-sm text-secondary-text hover:text-link-blue">EN</button>
+                    <span class="text-sm text-secondary-text/50 mx-1">|</span>
+                    <button data-lang="nl" class="text-sm text-secondary-text hover:text-link-blue">NL</button>
                 </div>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-gray-600 focus:outline-none focus:text-indigo-600">
+            <button class="md:hidden text-secondary-text focus:outline-none focus:text-link-blue">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -133,28 +127,28 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="relative text-white py-20 px-4 md:py-32 flex items-center justify-center rounded-xl m-4 shadow-lg overflow-hidden">
-            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
             <img src="assets/images/hero-background.jpg" alt="Modern IT Infrastructure" class="absolute inset-0 w-full h-full object-cover">
             <div class="relative z-20 container mx-auto text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6" data-i18n="hero.title"></h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto" data-i18n="hero.subtitle"></p>
-                <a href="#services" class="bg-white text-indigo-600 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 transform hover:scale-105" data-i18n="hero.button"></a>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90" data-i18n="hero.subtitle"></p>
+                <a href="#services" class="bg-link-blue text-white hover:bg-opacity-90 px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 transform hover:scale-105" data-i18n="hero.button"></a>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-16 px-4 md:py-24 bg-surface rounded-xl m-4 shadow-lg">
+        <section id="services" class="py-16 px-4 md:py-24 bg-background">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="services.title"></h2>
-                    <p class="text-lg text-secondary mt-2" data-i18n="services.subtitle"></p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-text" data-i18n="services.title"></h2>
+                    <p class="text-lg text-secondary-text mt-2" data-i18n="services.subtitle"></p>
                 </div>
                 
-                <div class="space-y-12">
+                <div class="space-y-8">
                     <!-- Tier 1 -->
-                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-indigo-500">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4" data-i18n="services.tier1Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
+                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier1Title"></h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
                             <li data-i18n="services.tier1Item1"></li>
                             <li data-i18n="services.tier1Item2"></li>
                             <li data-i18n="services.tier1Item3"></li>
@@ -163,9 +157,9 @@
                     </div>
 
                     <!-- Tier 2 -->
-                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-green-500">
-                        <h3 class="text-2xl font-bold text-green-700 mb-4" data-i18n="services.tier2Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
+                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier2Title"></h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
                             <li data-i18n="services.tier2Item1"></li>
                             <li data-i18n="services.tier2Item2"></li>
                             <li data-i18n="services.tier2Item3"></li>
@@ -174,9 +168,9 @@
                     </div>
 
                     <!-- Tier 3 -->
-                    <div class="p-8 bg-gray-50 rounded-lg shadow-md border-l-4 border-red-500">
-                        <h3 class="text-2xl font-bold text-red-700 mb-4" data-i18n="services.tier3Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
+                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier3Title"></h3>
+                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
                             <li data-i18n="services.tier3Item1"></li>
                             <li data-i18n="services.tier3Item2"></li>
                             <li data-i18n="services.tier3Item3"></li>
@@ -188,15 +182,15 @@
 
                 <!-- Additional Managed Services -->
                 <div class="mt-16">
-                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" data-i18n="services.additionalTitle"></h3>
+                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-primary-text" data-i18n="services.additionalTitle"></h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="services.assetManagementTitle"></h4>
-                            <p class="text-secondary" data-i18n="services.assetManagementDesc"></p>
+                        <div class="bg-gray-50/50 p-6 rounded-lg border border-divider">
+                            <h4 class="text-xl font-semibold text-primary-text mb-3" data-i18n="services.assetManagementTitle"></h4>
+                            <p class="text-secondary-text" data-i18n="services.assetManagementDesc"></p>
                         </div>
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="services.procurementTitle"></h4>
-                            <p class="text-secondary" data-i18n="services.procurementDesc"></p>
+                        <div class="bg-gray-50/50 p-6 rounded-lg border border-divider">
+                            <h4 class="text-xl font-semibold text-primary-text mb-3" data-i18n="services.procurementTitle"></h4>
+                            <p class="text-secondary-text" data-i18n="services.procurementDesc"></p>
                         </div>
                     </div>
                 </div>
@@ -204,75 +198,72 @@
         </section>
 
     <!-- How It Works Section (Flow Diagram) -->
-        <section id="how-it-works" class="py-16 px-4 md:py-24 bg-gray-100 rounded-xl m-4 shadow-lg">
+        <section id="how-it-works" class="py-16 px-4 md:py-24 bg-gray-50/80 border-t border-b border-divider">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900" data-i18n="howItWorks.title"></h2>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-text" data-i18n="howItWorks.title"></h2>
+                <div class="flex flex-col md:flex-row justify-center items-start gap-8 lg:gap-12">
                     <!-- Step 1 -->
-                    <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="mb-4 text-indigo-600">
+                    <div class="relative flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-divider flex-1 max-w-sm w-full transition-transform transform hover:-translate-y-2">
+                        <div class="mb-4 text-link-blue">
                             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="howItWorks.step1Title"></h3>
-                        <p class="text-gray-600" data-i18n="howItWorks.step1Desc"></p>
-                        <!-- Connector -->
+                        <h3 class="text-xl font-semibold text-primary-text mb-3" data-i18n="howItWorks.step1Title"></h3>
+                        <p class="text-secondary-text" data-i18n="howItWorks.step1Desc"></p>
                     </div>
                     <!-- Step 2 -->
-                    <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="mb-4 text-green-600">
+                    <div class="relative flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-divider flex-1 max-w-sm w-full transition-transform transform hover:-translate-y-2">
+                        <div class="mb-4 text-link-blue">
                             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="howItWorks.step2Title"></h3>
-                        <p class="text-gray-600" data-i18n="howItWorks.step2Desc"></p>
-                        <!-- Connector -->
+                        <h3 class="text-xl font-semibold text-primary-text mb-3" data-i18n="howItWorks.step2Title"></h3>
+                        <p class="text-secondary-text" data-i18n="howItWorks.step2Desc"></p>
                     </div>
                     <!-- Step 3 -->
-                    <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="mb-4 text-yellow-600">
+                    <div class="relative flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-divider flex-1 max-w-sm w-full transition-transform transform hover:-translate-y-2">
+                        <div class="mb-4 text-link-blue">
                             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="howItWorks.step3Title"></h3>
-                        <p class="text-gray-600" data-i18n="howItWorks.step3Desc"></p>
-                        <!-- Connector -->
+                        <h3 class="text-xl font-semibold text-primary-text mb-3" data-i18n="howItWorks.step3Title"></h3>
+                        <p class="text-secondary-text" data-i18n="howItWorks.step3Desc"></p>
                     </div>
                     <!-- Step 4 -->
-                    <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="mb-4 text-red-600">
+                    <div class="relative flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-divider flex-1 max-w-sm w-full transition-transform transform hover:-translate-y-2">
+                        <div class="mb-4 text-link-blue">
                             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="howItWorks.step4Title"></h3>
-                        <p class="text-gray-600" data-i18n="howItWorks.step4Desc"></p>
+                        <h3 class="text-xl font-semibold text-primary-text mb-3" data-i18n="howItWorks.step4Title"></h3>
+                        <p class="text-secondary-text" data-i18n="howItWorks.step4Desc"></p>
                     </div>
                 </div>
             </div>
         </section>   
 
         <!-- About Section -->
-        <section id="about" class="py-16 px-4 md:py-24 bg-subtle rounded-xl m-4 shadow-lg">
+        <section id="about" class="py-16 px-4 md:py-24 bg-background border-b border-divider">
             <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900" data-i18n="about.title"></h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto" data-i18n="about.description"></p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-text" data-i18n="about.title"></h2>
+                <p class="text-lg text-secondary-text max-w-3xl mx-auto" data-i18n="about.description"></p>
             </div>
         </section>
 
         <!-- Inquiry Section -->
-        <section id="inquiry" class="py-16 px-4 md:py-24 bg-background rounded-xl m-4 shadow-lg">
+        <section id="inquiry" class="py-16 px-4 md:py-24 bg-gray-50/80">
             <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-indigo-700" data-i18n="inquiry.title"></h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8" data-i18n="inquiry.description"></p>
-                <a href="form.html" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 text-lg" data-i18n="inquiry.button"></a>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-text" data-i18n="inquiry.title"></h2>
+                <p class="text-lg text-secondary-text max-w-2xl mx-auto mb-8" data-i18n="inquiry.description"></p>
+                <a href="form.html" class="inline-block bg-link-blue text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 text-lg" data-i18n="inquiry.button"></a>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16 px-4 md:py-24 bg-surface rounded-xl m-4 shadow-lg">
+        <section id="contact" class="py-16 px-4 md:py-24 bg-background border-t border-divider">
             <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900" data-i18n="contact.title"></h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8" data-i18n="contact.description"></p>
-                <p class="text-xl font-semibold text-indigo-600">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-text" data-i18n="contact.title"></h2>
+                <p class="text-lg text-secondary-text max-w-2xl mx-auto mb-8" data-i18n="contact.description"></p>
+                <p class="text-xl font-semibold text-link-blue">
                     <a href="mailto:connect@techcura.services" class="hover:underline">connect@techcura.services</a>
                 </p>
-                <p class="text-xl font-semibold text-indigo-600 mt-4">
+                <p class="text-xl font-semibold text-link-blue mt-4">
                     <a href="tel:+31-XXX-XXXXXXX" class="hover:underline">+31 683540581</a>
                 </p>
             </div>
@@ -280,12 +271,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-secondary text-white py-8 rounded-t-lg">
+    <footer class="bg-primary-text text-background py-8">
         <div class="container mx-auto text-center px-4">
-            <p class="text-sm mb-4" data-i18n="footer.copyright"></p>
+            <p class="text-sm mb-4 opacity-70" data-i18n="footer.copyright"></p>
             <div class="flex justify-center space-x-6">
-                <a href="#" class="text-background hover:text-white transition duration-300" data-i18n="footer.privacy"></a>
-                <a href="#" class="text-background hover:text-white transition duration-300" data-i18n="footer.terms"></a>
+                <a href="#" class="opacity-70 hover:opacity-100 transition duration-300" data-i18n="footer.privacy"></a>
+                <a href="#" class="opacity-70 hover:opacity-100 transition duration-300" data-i18n="footer.terms"></a>
             </div>
         </div>
     </footer>
