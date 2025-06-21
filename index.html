@@ -108,12 +108,18 @@
                 <span class="ml-2 text-base font-medium text-secondary">Your Complete IT Partner.</span>
             </a>
             <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2">Home</a>
                 <a href="#services" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2">Services</a>
                 <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 transition duration-300 rounded-md p-2">How It Works</a>
                 <a href="#about" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2">About</a>
                 <a href="#contact" class="text-secondary hover:text-primary transition duration-300 rounded-md p-2">Contact</a>
+                <!-- Language Switcher -->
+                <div class="flex items-center border-l border-gray-300 ml-4 pl-4">
+                    <span class="text-sm font-semibold text-primary">EN</span>
+                    <span class="text-sm text-gray-400 mx-1">|</span>
+                    <a href="/index-nl.html" class="text-sm text-secondary hover:text-primary">NL</a>
+                </div>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
             <button class="md:hidden text-gray-600 focus:outline-none focus:text-indigo-600">
@@ -126,12 +132,14 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="bg-gradient-to-r from-primary to-accent text-white py-20 px-4 md:py-32 flex items-center justify-center rounded-xl m-4 shadow-lg">
-            <div class="container mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 rounded-lg p-2">
+        <section id="home" class="relative text-white py-20 px-4 md:py-32 flex items-center justify-center rounded-xl m-4 shadow-lg overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <img src="assets/images/hero-background.jpg" alt="Modern IT Infrastructure" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative z-20 container mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                     Your IT, Simplified. Secure. Productive.
                 </h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto rounded-lg p-2">
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
                     Techcura offers 24/7 expert IT support and infrastructure solutions for SMEs in the Netherlands, ensuring smooth and secure operations.
                 </p>
                 <a href="#services" class="bg-white text-indigo-600 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 transform hover:scale-105">
@@ -208,41 +216,42 @@
                 <div class="flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-16">
                     <!-- Step 1 -->
                     <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="text-indigo-600 text-5xl font-bold mb-4">1</div>
+                        <div class="mb-4 text-indigo-600">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Initial Contact & Consultation</h3>
                         <p class="text-gray-600">
                             Reach out to us with your IT needs. We'll schedule a consultation to understand your business and challenges.
                         </p>
-                        <!-- Connector for large screens -->
-                        <div class="hidden lg:block absolute right-[-60px] top-1/2 -translate-y-1/2 w-20 h-1 bg-indigo-200 rounded-full">
-                            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-indigo-400 rotate-45 transform translate-x-1/2"></div>
-                        </div>
+                        <!-- Connector -->
                     </div>
                     <!-- Step 2 -->
                     <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="text-green-600 text-5xl font-bold mb-4">2</div>
+                        <div class="mb-4 text-green-600">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Comprehensive IT Assessment</h3>
                         <p class="text-gray-600">
                             Our experts conduct a thorough analysis of your current IT infrastructure and identify key areas for improvement.
                         </p>
-                        <div class="hidden lg:block absolute right-[-60px] top-1/2 -translate-y-1/2 w-20 h-1 bg-indigo-200 rounded-full">
-                            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-indigo-400 rotate-45 transform translate-x-1/2"></div>
-                        </div>
+                        <!-- Connector -->
                     </div>
                     <!-- Step 3 -->
                     <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="text-yellow-600 text-5xl font-bold mb-4">3</div>
+                        <div class="mb-4 text-yellow-600">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Tailored Solution & Implementation</h3>
                         <p class="text-gray-600">
                             We design and implement customized solutions, from hardware setup to cybersecurity, tailored to your unique requirements.
                         </p>
-                        <div class="hidden lg:block absolute right-[-60px] top-1/2 -translate-y-1/2 w-20 h-1 bg-indigo-200 rounded-full">
-                            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-indigo-400 rotate-45 transform translate-x-1/2"></div>
-                        </div>
+                        <!-- Connector -->
                     </div>
                     <!-- Step 4 -->
                     <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105 flex-1 max-w-xs w-full">
-                        <div class="text-red-600 text-5xl font-bold mb-4">4</div>
+                        <div class="mb-4 text-red-600">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Ongoing 24/7 Support & Monitoring</h3>
                         <p class="text-gray-600">
                             Benefit from continuous monitoring and 24/7 expert support to ensure your IT environment runs smoothly and securely.
