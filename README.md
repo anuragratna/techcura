@@ -8,12 +8,12 @@ This repository contains the source code for the official website of Techcura, a
 - **Localization:** Supports both English (EN) and Dutch (NL) languages, with content dynamically loaded from JSON files.
 - **Contact Form:** Integrated with [Formspree](https://formspree.io/) for easy and reliable form submissions.
 - **Secure:** Implements a Content Security Policy (CSP) and other security headers to protect against common web vulnerabilities.
-- **Modern Tech Stack:** Built with Tailwind CSS and vanilla JavaScript for a lightweight and fast user experience.
+- **Self-Contained:** No external CSS or JavaScript frameworks. The entire design is implemented with a single, internal stylesheet for maximum performance and portability.
 
 ## 🚀 Technologies Used
 
 - **HTML5**
-- **Tailwind CSS** for the utility-first styling framework.
+- **CSS3 (Internal Stylesheet)** for all styling.
 - **Vanilla JavaScript** for interactive features like localization and the mobile menu.
 - **Formspree** for backend form handling.
 - **Git & GitHub** for version control.
