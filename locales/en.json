@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Expert IT Support & Solutions in the Netherlands | Techcura",
+    "description": "Techcura offers 24/7 expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands. Simplify your IT and boost productivity.",
+    "keywords": "IT support Netherlands, SME IT services, cybersecurity solutions, managed IT services, IT infrastructure, tech support"
+  },
+  "navigation": {
+    "brandTagline": "Your Complete IT Partner.",
+    "home": "Home",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your IT, Simplified. Secure. Productive.",
+    "subtitle": "Techcura offers 24/7 expert IT support and infrastructure solutions for SMEs in the Netherlands, ensuring smooth and secure operations.",
+    "button": "Explore Our Services"
+  },
+  "services": {
+    "title": "Our Core Services",
+    "subtitle": "A Tiered Approach to Fit Your Business Needs",
+    "tier1Title": "Tier 1: Basic IT Support",
+    "tier1Item1": "IT Support & Helpdesk Services (remote and onsite)",
+    "tier1Item2": "Office & Facility IT Support (Wi-Fi, cabling, printers, etc.)",
+    "tier1Item3": "First-line technical troubleshooting",
+    "tier1Item4": "User management and onboarding/offboarding",
+    "tier2Title": "Tier 2: Infrastructure Support",
+    "tier2Item1": "Infrastructure Management (servers, network, firewalls, AD)",
+    "tier2Item2": "Network and device configuration",
+    "tier2Item3": "Domain and access control (Active Directory setup and maintenance)",
+    "tier2Item4": "Onsite infrastructure monitoring and escalation resolution",
+    "tier3Title": "Tier 3: Advanced IT & Cybersecurity",
+    "tier3Item1": "Advanced Server & Application Support (performance tuning, patching)",
+    "tier3Item2": "Cloud & Backup Solutions (Office 365, Google Workspace, AWS)",
+    "tier3Item3": "Cybersecurity Services (endpoint protection, firewalls, threat detection, compliance)",
+    "tier3Item4": "Hybrid and On-prem/cloud IT environment support",
+    "tier3Item5": "Vulnerability assessments and mitigation strategies",
+    "additionalTitle": "Additional Managed Services",
+    "assetManagementTitle": "IT Asset Management",
+    "assetManagementDesc": "Inventory tracking, lifecycle management, warranty tracking, and usage monitoring of your IT assets. Gain full visibility and control over your hardware and software.",
+    "procurementTitle": "IT Procurement Services",
+    "procurementDesc": "From laptops and routers to licensed software and cloud services, we help you choose the right technology, negotiate with vendors, and manage procurement logistics."
+  },
+  "howItWorks": {
+    "title": "How Techcura Works For You",
+    "step1Title": "Initial Contact & Consultation",
+    "step1Desc": "Reach out to us with your IT needs. We'll schedule a consultation to understand your business and challenges.",
+    "step2Title": "Comprehensive IT Assessment",
+    "step2Desc": "Our experts conduct a thorough analysis of your current IT infrastructure and identify key areas for improvement.",
+    "step3Title": "Tailored Solution & Implementation",
+    "step3Desc": "We design and implement customized solutions, from hardware setup to cybersecurity, tailored to your unique requirements.",
+    "step4Title": "Ongoing 24/7 Support & Monitoring",
+    "step4Desc": "Benefit from continuous monitoring and 24/7 expert support to ensure your IT environment runs smoothly and securely."
+  },
+  "about": {
+    "title": "About Techcura",
+    "description": "Techcura is a modern IT support and infrastructure solutions company based in the Netherlands, dedicated to helping SMEs run smoothly and securely. We offer 24/7 expert support across hardware, networking, application maintenance, cybersecurity, and server operations. Our end-to-end services are designed to eliminate IT headaches, improve performance, and ensure your business stays connected, protected, and productive."
+  },
+  "inquiry": {
+    "title": "Have an Inquiry?",
+    "description": "Interested in our services or have a specific question? Fill out our inquiry form and our team will get back to you promptly.",
+    "button": "Submit an Inquiry"
+  },
+  "contact": {
+    "title": "Get in Touch with Techcura",
+    "description": "Ready to eliminate your IT headaches? Contact us today to learn how Techcura can support your business."
+  },
+  "footer": {
+    "copyright": "&copy; 2025 Techcura. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 

@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Deskundige IT-ondersteuning & Oplossingen in Nederland | Techcura",
+    "description": "Techcura biedt 24/7 deskundige IT-ondersteuning, cybersecurity en infrastructuuroplossingen voor het MKB in Nederland. Vereenvoudig uw IT en verhoog de productiviteit.",
+    "keywords": "IT-ondersteuning Nederland, MKB IT-diensten, cybersecurity-oplossingen, beheerde IT-diensten, IT-infrastructuur, technische ondersteuning"
+  },
+  "navigation": {
+    "brandTagline": "Uw Complete IT-Partner.",
+    "home": "Home",
+    "services": "Diensten",
+    "howItWorks": "Hoe het werkt",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Uw IT, Vereenvoudigd. Veilig. Productief.",
+    "subtitle": "Techcura biedt 24/7 deskundige IT-ondersteuning en infrastructuuroplossingen voor het MKB in Nederland, voor soepele en veilige operaties.",
+    "button": "Ontdek Onze Diensten"
+  },
+  "services": {
+    "title": "Onze Kerndiensten",
+    "subtitle": "Een Gelaagde Aanpak voor Uw Bedrijfsbehoeften",
+    "tier1Title": "Niveau 1: Basis IT-ondersteuning",
+    "tier1Item1": "IT-ondersteuning & Helpdeskdiensten (op afstand en op locatie)",
+    "tier1Item2": "Kantoor- & Facilitaire IT-ondersteuning (Wi-Fi, bekabeling, printers, etc.)",
+    "tier1Item3": "Eerstelijns technische probleemoplossing",
+    "tier1Item4": "Gebruikersbeheer en onboarding/offboarding",
+    "tier2Title": "Niveau 2: Infrastructuurondersteuning",
+    "tier2Item1": "Infrastructuurbeheer (servers, netwerk, firewalls, AD)",
+    "tier2Item2": "Netwerk- en apparaatconfiguratie",
+    "tier2Item3": "Domein- en toegangscontrole (Active Directory setup en onderhoud)",
+    "tier2Item4": "Onsite infrastructuurmonitoring en escalatie-oplossing",
+    "tier3Title": "Niveau 3: Geavanceerde IT & Cybersecurity",
+    "tier3Item1": "Geavanceerde Server- & Applicatieondersteuning (prestatie-tuning, patching)",
+    "tier3Item2": "Cloud- & Back-upoplossingen (Office 365, Google Workspace, AWS)",
+    "tier3Item3": "Cybersecuritydiensten (endpoint-bescherming, firewalls, dreigingsdetectie, compliance)",
+    "tier3Item4": "Hybride en On-prem/cloud IT-omgevingsondersteuning",
+    "tier3Item5": "Kwetsbaarheidsbeoordelingen en mitigatiestrategieën",
+    "additionalTitle": "Aanvullende Beheerde Diensten",
+    "assetManagementTitle": "IT Asset Management",
+    "assetManagementDesc": "Inventaris-tracking, levenscyclusbeheer, garantie-tracking en gebruiksmonitoring van uw IT-assets. Krijg volledig inzicht en controle over uw hardware en software.",
+    "procurementTitle": "IT-inkoopdiensten",
+    "procurementDesc": "Van laptops en routers tot gelicentieerde software en clouddiensten, wij helpen u de juiste technologie te kiezen, met leveranciers te onderhandelen en de inkooplogistiek te beheren."
+  },
+  "howItWorks": {
+    "title": "Hoe Techcura Voor U Werkt",
+    "step1Title": "Eerste Contact & Consult",
+    "step1Desc": "Neem contact met ons op met uw IT-behoeften. We plannen een consult om uw bedrijf en uitdagingen te begrijpen.",
+    "step2Title": "Uitgebreide IT-beoordeling",
+    "step2Desc": "Onze experts voeren een grondige analyse uit van uw huidige IT-infrastructuur en identificeren belangrijke verbeterpunten.",
+    "step3Title": "Maatwerkoplossing & Implementatie",
+    "step3Desc": "Wij ontwerpen en implementeren op maat gemaakte oplossingen, van hardware-installatie tot cybersecurity, afgestemd op uw unieke eisen.",
+    "step4Title": "Doorlopende 24/7 Ondersteuning & Monitoring",
+    "step4Desc": "Profiteer van continue monitoring en 24/7 deskundige ondersteuning om ervoor te zorgen dat uw IT-omgeving soepel en veilig draait."
+  },
+  "about": {
+    "title": "Over Techcura",
+    "description": "Techcura is een modern IT-ondersteunings- en infrastructuurbedrijf gevestigd in Nederland, toegewijd aan het helpen van het MKB om soepel en veilig te functioneren. Wij bieden 24/7 deskundige ondersteuning op het gebied van hardware, netwerken, applicatieonderhoud, cybersecurity en serverbeheer. Onze end-to-end diensten zijn ontworpen om IT-hoofdpijn te elimineren, prestaties te verbeteren en ervoor te zorgen dat uw bedrijf verbonden, beschermd en productief blijft."
+  },
+  "inquiry": {
+    "title": "Heeft u een vraag?",
+    "description": "Geïnteresseerd in onze diensten of heeft u een specifieke vraag? Vul ons aanvraagformulier in en ons team neemt spoedig contact met u op.",
+    "button": "Dien een aanvraag in"
+  },
+  "contact": {
+    "title": "Neem contact op met Techcura",
+    "description": "Klaar om uw IT-hoofdpijn te elimineren? Neem vandaag nog contact met ons op om te ontdekken hoe Techcura uw bedrijf kan ondersteunen."
+  },
+  "footer": {
+    "copyright": "&copy; 2025 Techcura. Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden"
+  }
+} 
