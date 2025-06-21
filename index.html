@@ -101,14 +101,14 @@
                 <span>Techcura</span>
                 <span class="ml-2 text-base font-medium text-secondary-text" data-i18n="navigation.brandTagline"></span>
             </a>
-            <!-- Navigation Links -->
+            <!-- Navigation Links (Desktop) -->
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.home"></a>
                 <a href="#services" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.services"></a>
                 <a href="#how-it-works" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.howItWorks"></a>
                 <a href="#about" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.about"></a>
                 <a href="#contact" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.contact"></a>
-                <!-- Language Switcher -->
+                <!-- Language Switcher (Desktop) -->
                 <div class="lang-switcher flex items-center border-l border-divider ml-4 pl-4">
                     <button data-lang="en" class="text-sm text-secondary-text hover:text-link-blue">EN</button>
                     <span class="text-sm text-secondary-text/50 mx-1">|</span>
@@ -116,12 +116,28 @@
                 </div>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-secondary-text focus:outline-none focus:text-link-blue">
+            <button id="mobile-menu-button" class="md:hidden text-secondary-text focus:outline-none focus:text-link-blue">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#home" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.home"></a>
+            <a href="#services" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.services"></a>
+            <a href="#how-it-works" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.howItWorks"></a>
+            <a href="#about" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.about"></a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.contact"></a>
+             <!-- Language Switcher (Mobile) -->
+            <div class="border-t border-divider mt-2 pt-2">
+                <div class="lang-switcher flex justify-center items-center space-x-4 py-2">
+                    <button data-lang="en" class="text-sm text-secondary-text hover:text-link-blue">EN</button>
+                    <span class="text-sm text-secondary-text/50">|</span>
+                    <button data-lang="nl" class="text-sm text-secondary-text hover:text-link-blue">NL</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -264,7 +280,7 @@
                     <a href="mailto:connect@techcura.services" class="hover:underline">connect@techcura.services</a>
                 </p>
                 <p class="text-xl font-semibold text-link-blue mt-4">
-                    <a href="tel:+31-XXX-XXXXXXX" class="hover:underline">+31 683540581</a>
+                    <a href="tel:+31683540581" class="hover:underline">+31 683540581</a>
                 </p>
             </div>
         </section>
@@ -282,5 +298,6 @@
     </footer>
 
     <script src="assets/js/localization.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
