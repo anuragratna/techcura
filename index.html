@@ -26,7 +26,7 @@
     <meta property="twitter:image" content="https://www.techcura.services/assets/images/social-share.png"> <!-- Replace with a compelling share image URL -->
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" integrity="sha384-L383i5x3PYWH2IwbK5lYJ0i1J9aN/sfKAUYicBv2+x8p22qj4270DDwP+D7ScuT7" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -90,6 +90,11 @@
       ]
     }
     </script>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; form-action 'self' https://formspree.io;">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
 </head>
 <body class="bg-background text-primary-text font-sans">
 
