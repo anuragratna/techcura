@@ -1,41 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags will be updated by JS -->
     <title>Techcura</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Techcura offers 24/7 expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands.">
+    <meta name="keywords" content="IT support, cybersecurity, infrastructure, managed services, Netherlands">
     <meta name="author" content="Techcura">
-    <link rel="canonical" href="https://www.techcura.services"> <!-- Replace with your actual domain -->
+    <link rel="canonical" href="https://www.techcura.services">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.techcura.services"> <!-- Replace with your actual domain -->
+    <meta property="og:url" content="https://www.techcura.services">
     <meta property="og:title" content="Expert IT Support & Solutions in the Netherlands | Techcura">
     <meta property="og:description" content="Techcura offers 24/7 expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands.">
-    <meta property="og:image" content="https://www.techcura.services/assets/images/social-share.png"> <!-- Replace with a compelling share image URL -->
+    <meta property="og:image" content="https://www.techcura.services/assets/images/social-share.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.techcura.services"> <!-- Replace with your actual domain -->
+    <meta property="twitter:url" content="https://www.techcura.services">
     <meta property="twitter:title" content="Expert IT Support & Solutions in the Netherlands | Techcura">
     <meta property="twitter:description" content="Techcura offers 24/7 expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands.">
-    <meta property="twitter:image" content="https://www.techcura.services/assets/images/social-share.png"> <!-- Replace with a compelling share image URL -->
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com" integrity="sha384-L383i5x3PYWH2IwbK5lYJ0i1J9aN/sfKAUYicBv2+x8p22qj4270DDwP+D7ScuT7" crossorigin="anonymous"></script>
-
-    <!-- Google Fonts - Inter (Fallback, no longer primary) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Helvetica+Neue&display=swap" rel="stylesheet">
+    <meta property="twitter:image" content="https://www.techcura.services/assets/images/social-share.png">
+    
     <link rel="icon" type="image/png" href="assets/images/t_logo.png">
-    <link rel="stylesheet" href="assets/css/custom.css">
 
-    <!-- Schema Markup for Local Business -->
+    <style>
+        /* Apple-inspired Design System */
+        :root {
+            --background: #FFFFFF;
+            --primary-text: #1D1D1F;
+            --secondary-text: #6E6E73;
+            --link-blue: #0071E3;
+            --divider: #D2D2D7;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--primary-text);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--divider);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a.brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--primary-text);
+        }
+        nav .nav-links { display: none; }
+        @media (min-width: 768px) {
+            nav .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+        }
+        nav .nav-links a, .mobile-menu a {
+            color: var(--secondary-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav .nav-links a:hover, .mobile-menu a:hover { color: var(--link-blue); }
+        .lang-switcher button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+        #mobile-menu-button { display: block; }
+        @media (min-width: 768px) { #mobile-menu-button { display: none; } }
+        #mobile-menu { display: none; padding: 1rem; }
+
+        section { padding: 3rem 0; text-align: center; }
+        section#home {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        h1 { font-size: 3rem; font-weight: 800; }
+        h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; }
+        p { max-width: 600px; margin-left: auto; margin-right: auto; color: var(--secondary-text); }
+        .cta-button {
+            background-color: var(--link-blue);
+            color: var(--background);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+        .cta-button:hover { opacity: 0.9; }
+
+        footer {
+            background-color: var(--primary-text);
+            color: var(--background);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        footer a { color: var(--background); opacity: 0.7; transition: opacity 0.3s; }
+        footer a:hover { opacity: 1; }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -73,252 +154,86 @@
       ]
     }
     </script>
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://*.pusher.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io; connect-src 'self' https://*.pusher.com wss://*.pusher.com;">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io;">
 </head>
-<body class="bg-background text-primary-text font-sans">
+<body>
 
-    <!-- Header/Navigation Bar -->
-    <header class="bg-background/80 backdrop-blur-lg shadow-sm p-4 sticky top-0 z-50">
-        <nav class="container mx-auto flex justify-between items-center px-4">
-            <!-- Brand Logo/Name -->
-            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-primary-text rounded-md p-2">
-                <span>Techcura</span>
-                <span class="ml-2 text-base font-medium text-secondary-text" data-i18n="navigation.brandTagline"></span>
-            </a>
-            <!-- Navigation Links (Desktop) -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.home"></a>
-                <a href="#services" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.services"></a>
-                <a href="#how-it-works" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.howItWorks"></a>
-                <a href="#about" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.about"></a>
-                <a href="#contact" class="text-secondary-text hover:text-link-blue transition duration-300 rounded-md p-2" data-i18n="navigation.contact"></a>
-                <!-- Language Switcher (Desktop) -->
-                <div class="lang-switcher flex items-center border-l border-divider ml-4 pl-4">
-                    <button data-lang="en" class="text-sm text-secondary-text hover:text-link-blue">EN</button>
-                    <span class="text-sm text-secondary-text/50 mx-1">|</span>
-                    <button data-lang="nl" class="text-sm text-secondary-text hover:text-link-blue">NL</button>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="brand">Techcura</a>
+                <div class="nav-links">
+                    <a href="#home" data-i18n="navigation.home">Home</a>
+                    <a href="#services" data-i18n="navigation.services">Services</a>
+                    <a href="#about" data-i18n="navigation.about">About</a>
+                    <a href="#contact" data-i18n="navigation.contact">Contact</a>
+                    <div class="lang-switcher">
+                        <button data-lang="en">EN</button>
+                        <span>|</span>
+                        <button data-lang="nl">NL</button>
+                    </div>
                 </div>
-            </div>
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-secondary-text focus:outline-none focus:text-link-blue">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
-            <a href="#home" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.home"></a>
-            <a href="#services" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.services"></a>
-            <a href="#how-it-works" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.howItWorks"></a>
-            <a href="#about" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.about"></a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-secondary-text hover:bg-gray-50 hover:text-link-blue" data-i18n="navigation.contact"></a>
-             <!-- Language Switcher (Mobile) -->
-            <div class="border-t border-divider mt-2 pt-2">
-                <div class="lang-switcher flex justify-center items-center space-x-4 py-2">
-                    <button data-lang="en" class="text-sm text-secondary-text hover:text-link-blue">EN</button>
-                    <span class="text-sm text-secondary-text/50">|</span>
-                    <button data-lang="nl" class="text-sm text-secondary-text hover:text-link-blue">NL</button>
-                </div>
-            </div>
+                <button id="mobile-menu-button">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
         </div>
     </header>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#home" data-i18n="navigation.home">Home</a>
+        <a href="#services" data-i18n="navigation.services">Services</a>
+        <a href="#about" data-i18n="navigation.about">About</a>
+        <a href="#contact" data-i18n="navigation.contact">Contact</a>
+        <div class="lang-switcher">
+            <button data-lang="en">EN</button>
+            <span>|</span>
+            <button data-lang="nl">NL</button>
+        </div>
+    </div>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="text-center py-20 px-4 md:py-32">
-            <div class="container mx-auto">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-primary-text" data-i18n="hero.title"></h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-secondary-text" data-i18n="hero.subtitle"></p>
-                <a href="#services" class="bg-link-blue text-white hover:bg-opacity-90 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 transform hover:scale-105" data-i18n="hero.button"></a>
+        <section id="home">
+            <div class="container">
+                <h1 data-i18n="hero.title">Your Partner in Digital Transformation</h1>
+                <p data-i18n="hero.subtitle">Expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands.</p>
+                <a href="#services" class="cta-button" data-i18n="hero.button">Explore Our Services</a>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-16 px-4 md:py-24 bg-background">
-            <div class="container mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-text" data-i18n="services.title"></h2>
-                    <p class="text-lg text-secondary-text mt-2" data-i18n="services.subtitle"></p>
-                </div>
-                
-                <div class="space-y-8">
-                    <!-- Tier 1 -->
-                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
-                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier1Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
-                            <li data-i18n="services.tier1Item1"></li>
-                            <li data-i18n="services.tier1Item2"></li>
-                            <li data-i18n="services.tier1Item3"></li>
-                            <li data-i18n="services.tier1Item4"></li>
-                        </ul>
-                    </div>
-
-                    <!-- Tier 2 -->
-                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
-                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier2Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
-                            <li data-i18n="services.tier2Item1"></li>
-                            <li data-i18n="services.tier2Item2"></li>
-                            <li data-i18n="services.tier2Item3"></li>
-                            <li data-i18n="services.tier2Item4"></li>
-                        </ul>
-                    </div>
-
-                    <!-- Tier 3 -->
-                    <div class="p-8 bg-gray-50/50 rounded-lg border border-divider transition-shadow hover:shadow-md">
-                        <h3 class="text-2xl font-bold text-primary-text mb-4" data-i18n="services.tier3Title"></h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
-                            <li data-i18n="services.tier3Item1"></li>
-                            <li data-i18n="services.tier3Item2"></li>
-                            <li data-i18n="services.tier3Item3"></li>
-                            <li data-i18n="services.tier3Item4"></li>
-                            <li data-i18n="services.tier3Item5"></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Additional Managed Services -->
-                <div class="mt-16">
-                    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-primary-text" data-i18n="services.additionalTitle"></h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-50/50 p-6 rounded-lg border border-divider">
-                            <h4 class="text-xl font-semibold text-primary-text mb-3" data-i18n="services.assetManagementTitle"></h4>
-                            <p class="text-secondary-text" data-i18n="services.assetManagementDesc"></p>
-                        </div>
-                        <div class="bg-gray-50/50 p-6 rounded-lg border border-divider">
-                            <h4 class="text-xl font-semibold text-primary-text mb-3" data-i18n="services.procurementTitle"></h4>
-                            <p class="text-secondary-text" data-i18n="services.procurementDesc"></p>
-                        </div>
-                    </div>
-                </div>
+        <section id="services">
+            <div class="container">
+                <h2 data-i18n="services.title">Our Services</h2>
+                <p data-i18n="services.subtitle">We provide a wide range of IT services to keep your business running smoothly.</p>
+                <!-- Service details would be populated here by localization.js -->
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <h2 data-i18n="about.title">About Us</h2>
+                <p data-i18n="about.description">We are a team of dedicated IT professionals committed to providing top-notch support and solutions.</p>
             </div>
         </section>
 
-    <!-- How It Works Section (Flow Diagram) -->
-        <section id="how-it-works" class="py-16 px-4 md:py-24 bg-gray-50/80 border-t border-b border-divider">
-            <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-primary-text" data-i18n="howItWorks.title"></h2>
-                
-                <div class="relative">
-                    <!-- Desktop Timeline -->
-                    <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-divider"></div>
-                    <!-- Mobile Timeline -->
-                    <div class="md:hidden absolute top-0 left-8 w-0.5 h-full bg-divider"></div>
-
-                    <div class="relative grid grid-cols-1 md:grid-cols-4 gap-y-12 md:gap-y-0 md:gap-x-8">
-                        <!-- Step 1 -->
-                        <div class="relative md:text-center">
-                            <div class="flex items-center md:justify-center">
-                                <div class="md:absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background"></div>
-                                <div class="absolute left-8 -top-1 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background md:hidden"></div>
-                                <div class="ml-16 md:ml-0 md:mb-8 text-link-blue">
-                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                </div>
-                            </div>
-                            <div class="ml-16 md:ml-0">
-                                <h3 class="text-xl font-semibold text-primary-text mb-2" data-i18n="howItWorks.step1Title"></h3>
-                                <p class="text-secondary-text" data-i18n="howItWorks.step1Desc"></p>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="relative md:text-center">
-                            <div class="flex items-center md:justify-center">
-                                <div class="md:absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background"></div>
-                                <div class="absolute left-8 -top-1 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background md:hidden"></div>
-                                <div class="ml-16 md:ml-0 md:mb-8 text-link-blue">
-                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                                </div>
-                            </div>
-                            <div class="ml-16 md:ml-0">
-                                <h3 class="text-xl font-semibold text-primary-text mb-2" data-i18n="howItWorks.step2Title"></h3>
-                                <p class="text-secondary-text" data-i18n="howItWorks.step2Desc"></p>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 -->
-                        <div class="relative md:text-center">
-                            <div class="flex items-center md:justify-center">
-                                <div class="md:absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background"></div>
-                                <div class="absolute left-8 -top-1 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background md:hidden"></div>
-                                <div class="ml-16 md:ml-0 md:mb-8 text-link-blue">
-                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                </div>
-                            </div>
-                            <div class="ml-16 md:ml-0">
-                                <h3 class="text-xl font-semibold text-primary-text mb-2" data-i18n="howItWorks.step3Title"></h3>
-                                <p class="text-secondary-text" data-i18n="howItWorks.step3Desc"></p>
-                            </div>
-                        </div>
-
-                        <!-- Step 4 -->
-                        <div class="relative md:text-center">
-                            <div class="flex items-center md:justify-center">
-                                <div class="md:absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background"></div>
-                                <div class="absolute left-8 -top-1 w-4 h-4 bg-link-blue rounded-full z-10 border-2 border-background md:hidden"></div>
-                                <div class="ml-16 md:ml-0 md:mb-8 text-link-blue">
-                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                </div>
-                            </div>
-                            <div class="ml-16 md:ml-0">
-                                <h3 class="text-xl font-semibold text-primary-text mb-2" data-i18n="howItWorks.step4Title"></h3>
-                                <p class="text-secondary-text" data-i18n="howItWorks.step4Desc"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>   
-
-        <!-- About Section -->
-        <section id="about" class="py-16 px-4 md:py-24 bg-background border-b border-divider">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-text" data-i18n="about.title"></h2>
-                <p class="text-lg text-secondary-text max-w-3xl mx-auto" data-i18n="about.description"></p>
-            </div>
-        </section>
-
-        <!-- Inquiry Section -->
-        <section id="inquiry" class="py-16 px-4 md:py-24 bg-gray-50/80">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-text" data-i18n="inquiry.title"></h2>
-                <p class="text-lg text-secondary-text max-w-2xl mx-auto mb-8" data-i18n="inquiry.description"></p>
-                <a href="form.html" class="inline-block bg-link-blue text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 text-lg" data-i18n="inquiry.button"></a>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 px-4 md:py-24 bg-background border-t border-divider">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-text" data-i18n="contact.title"></h2>
-                <p class="text-lg text-secondary-text max-w-2xl mx-auto mb-8" data-i18n="contact.description"></p>
-                <p class="text-xl font-semibold text-link-blue">
-                    <a href="mailto:connect@techcura.services" class="hover:underline">connect@techcura.services</a>
-                </p>
-                <p class="text-xl font-semibold text-link-blue mt-4">
-                    <a href="tel:+31683540581" class="hover:underline">+31 683540581</a>
-                </p>
+        <section id="contact">
+            <div class="container">
+                <h2 data-i18n="contact.title">Get in Touch</h2>
+                <p data-i18n="contact.description">Have a question or need a quote? We'd love to hear from you.</p>
+                <a href="form.html" class="cta-button" data-i18n="inquiry.button">Send an Inquiry</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-primary-text text-background py-8">
-        <div class="container mx-auto text-center px-4">
-            <p class="text-sm mb-4 opacity-70" data-i18n="footer.copyright"></p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="opacity-70 hover:opacity-100 transition duration-300" data-i18n="footer.privacy"></a>
-                <a href="#" class="opacity-70 hover:opacity-100 transition duration-300" data-i18n="footer.terms"></a>
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2024 Techcura. All rights reserved.</p>
+            <div>
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a> | 
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/tailwind.config.js"></script>
     <script src="assets/js/localization.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
