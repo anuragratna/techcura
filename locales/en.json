@@ -64,7 +64,10 @@
   },
   "contact": {
     "title": "Get in Touch with Techcura",
-    "description": "Ready to eliminate your IT headaches? Contact us today to learn how Techcura can support your business."
+    "description": "Ready to eliminate your IT headaches? Contact us today to learn how Techcura can support your business.",
+    "emailLabel": "Email:",
+    "email": "connect@techcura.services",
+    "inquiryButton": "Go to Inquiry Form"
   },
   "footer": {
     "copyright": "&copy; 2025 Techcura. All rights reserved.",

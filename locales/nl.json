@@ -64,7 +64,10 @@
   },
   "contact": {
     "title": "Neem contact op met Techcura",
-    "description": "Klaar om uw IT-hoofdpijn te elimineren? Neem vandaag nog contact met ons op om te ontdekken hoe Techcura uw bedrijf kan ondersteunen."
+    "description": "Klaar om uw IT-hoofdpijn te elimineren? Neem vandaag nog contact met ons op om te ontdekken hoe Techcura uw bedrijf kan ondersteunen.",
+    "emailLabel": "E-mail:",
+    "email": "connect@techcura.services",
+    "inquiryButton": "Ga naar Aanvraagformulier"
   },
   "footer": {
     "copyright": "&copy; 2025 Techcura. Alle rechten voorbehouden.",
