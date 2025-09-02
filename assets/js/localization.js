@@ -11,7 +11,7 @@ function applyTranslations(translations) {
         const key = element.getAttribute('data-i18n');
         const translation = key.split('.').reduce((obj, k) => (obj && obj[k] !== 'undefined') ? obj[k] : key, translations);
         if (translation !== key) {
-            element.innerHTML = translation;
+            element.textContent = translation;
         }
     });
 

@@ -115,6 +115,17 @@
         }
         footer a { color: var(--background); opacity: 0.7; transition: opacity 0.3s; }
         footer a:hover { opacity: 1; }
+
+        /* Responsive improvements */
+        @media (max-width: 767px) {
+            .container { padding: 0 0.5rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .cta-button { font-size: 1rem; padding: 0.6rem 1rem; }
+            nav .nav-links { display: none !important; }
+            #mobile-menu { display: none; position: absolute; top: 60px; left: 0; width: 100%; background: #fff; box-shadow: 0 2px 8px #0001; z-index: 200; }
+            #mobile-menu.show { display: block; }
+        }
     </style>
 
     <script type="application/ld+json">
@@ -154,7 +165,7 @@
       ]
     }
     </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://source.unsplash.com; form-action 'self' https://formspree.io;">
 </head>
 <body>
 
@@ -168,6 +179,8 @@
                 <div class="nav-links">
                     <a href="#home" data-i18n="navigation.home">Home</a>
                     <a href="#services" data-i18n="navigation.services">Services</a>
+                    <a href="#case-studies" data-i18n="navigation.caseStudies">Case Studies</a>
+                    <a href="#products" data-i18n="navigation.products">Products</a>
                     <a href="#about" data-i18n="navigation.about">About</a>
                     <a href="#contact" data-i18n="navigation.contact">Contact</a>
                     <div class="lang-switcher">
@@ -182,9 +195,11 @@
             </nav>
         </div>
     </header>
-    <div id="mobile-menu" class="mobile-menu">
+    <div id="mobile-menu" class="mobile-menu" style="display:none;">
         <a href="#home" data-i18n="navigation.home">Home</a>
         <a href="#services" data-i18n="navigation.services">Services</a>
+        <a href="#case-studies" data-i18n="navigation.caseStudies">Case Studies</a>
+        <a href="#products" data-i18n="navigation.products">Products</a>
         <a href="#about" data-i18n="navigation.about">About</a>
         <a href="#contact" data-i18n="navigation.contact">Contact</a>
         <div class="lang-switcher">
@@ -288,6 +303,62 @@
             </div>
         </section>
         
+        <!-- Case Studies Section -->
+        <section id="case-studies">
+            <div class="container">
+                <h2 data-i18n="caseStudies.title">AI Case Studies</h2>
+                <p data-i18n="caseStudies.subtitle">Real-world applications of AI across finance and operations.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?fintech,fraud" alt="Illustration representing fraud detection in fintech" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l6-6 4.5 4.5L21 4.5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3 20.25h18" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="caseStudies.fraud.title">Fraud Detection in FinTech</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="caseStudies.fraud.desc">Deploy anomaly detection and graph-based ML to identify and prevent fraudulent transactions in real time.</p>
+                    </div>
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?banking,analytics" alt="Credit risk analytics dashboard" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v12H3z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6 21h12M9 15v6m6-6v6" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="caseStudies.risk.title">Credit Risk Scoring</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="caseStudies.risk.desc">Improve lending decisions with explainable models that evaluate probability of default and risk exposure.</p>
+                    </div>
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?customer,callcenter" alt="AI customer support concept" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" /><circle cx="12" cy="12" r="9" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="caseStudies.support.title">AI Customer Support</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="caseStudies.support.desc">Automate Tier-1 queries with chatbots and route complex tickets with intent classification.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products">
+            <div class="container">
+                <h2 data-i18n="products.title">AI Products</h2>
+                <p data-i18n="products.subtitle">Out-of-the-box AI solutions to accelerate your operations.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?helpdesk,technology" alt="AI helpdesk assistant interface" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="products.helpdesk.title">AI Helpdesk Assistant</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="products.helpdesk.desc">A multilingual agent that resolves common IT issues, generates tickets, and integrates with your ITSM.</p>
+                    </div>
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?anomaly,analytics" alt="Anomaly detection concept visualization" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l6-6 4 4 6-6" /><path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="products.anomaly.title">Anomaly Detection Suite</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="products.anomaly.desc">Detect unusual patterns across transactions, logs, and metrics with configurable thresholds.</p>
+                    </div>
+                    <div style="flex: 1 1 250px; min-width: 260px; max-width: 320px; background: #f6f6f7; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px #0001;">
+                        <img src="https://source.unsplash.com/600x400/?document,ocr" alt="Document intelligence OCR concept" style="width:100%; height:160px; object-fit:cover; border-radius: 0.75rem; margin-bottom: 1rem;" />
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--link-blue); margin-bottom: 1rem;"><rect x="3" y="4" width="18" height="16" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6M7 16h4" /></svg>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="products.docintel.title">Document Intelligence</h3>
+                        <p style="font-size: 1rem; color: var(--secondary-text);" data-i18n="products.docintel.desc">OCR and extraction for invoices, IDs, and forms with validation and export pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="about">
             <div class="container">
                 <h2 data-i18n="about.title">About Us</h2>

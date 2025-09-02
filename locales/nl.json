@@ -8,6 +8,8 @@
     "brandTagline": "Uw Complete IT-Partner.",
     "home": "Home",
     "services": "Diensten",
+    "caseStudies": "Praktijkcases",
+    "products": "Producten",
     "howItWorks": "Hoe het werkt",
     "about": "Over ons",
     "contact": "Contact"
@@ -16,6 +18,38 @@
     "title": "Uw IT, Vereenvoudigd. Veilig. Productief.",
     "subtitle": "Techcura biedt 24/7 deskundige IT-ondersteuning en infrastructuuroplossingen voor het MKB in Nederland, voor soepele en veilige operaties.",
     "button": "Ontdek Onze Diensten"
+  },
+  "caseStudies": {
+    "title": "AI-praktijkcases",
+    "subtitle": "Toepassingen van AI in financiën en operaties.",
+    "fraud": {
+      "title": "Fraudedetectie in FinTech",
+      "desc": "Pas anomaliedetectie en graf-gebaseerde ML toe om frauduleuze transacties in realtime te identificeren en te voorkomen."
+    },
+    "risk": {
+      "title": "Kredietrisicoscore",
+      "desc": "Verbeter kredietbeslissingen met uitlegbare modellen die kans op wanbetaling en risico evalueren."
+    },
+    "support": {
+      "title": "AI Klantenondersteuning",
+      "desc": "Automatiseer Tier-1 vragen met chatbots en routeer complexe tickets met intentieclassificatie."
+    }
+  },
+  "products": {
+    "title": "AI-producten",
+    "subtitle": "Kant-en-klare AI-oplossingen om uw operaties te versnellen.",
+    "helpdesk": {
+      "title": "AI Helpdesk Assistent",
+      "desc": "Een meertalige agent die veelvoorkomende IT-problemen oplost, tickets aanmaakt en integreert met uw ITSM."
+    },
+    "anomaly": {
+      "title": "Anomaliedetectiesuite",
+      "desc": "Detecteer ongewone patronen in transacties, logs en metrics met configureerbare drempels."
+    },
+    "docintel": {
+      "title": "Document Intelligence",
+      "desc": "OCR en extractie voor facturen, ID's en formulieren met validatie en exportpijplijnen."
+    }
   },
   "services": {
     "title": "Onze Kerndiensten",

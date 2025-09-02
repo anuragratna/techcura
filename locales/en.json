@@ -8,6 +8,8 @@
     "brandTagline": "Your Complete IT Partner.",
     "home": "Home",
     "services": "Services",
+    "caseStudies": "Case Studies",
+    "products": "Products",
     "howItWorks": "How It Works",
     "about": "About",
     "contact": "Contact"
@@ -16,6 +18,38 @@
     "title": "Your IT, Simplified. Secure. Productive.",
     "subtitle": "Techcura offers 24/7 expert IT support and infrastructure solutions for SMEs in the Netherlands, ensuring smooth and secure operations.",
     "button": "Explore Our Services"
+  },
+  "caseStudies": {
+    "title": "AI Case Studies",
+    "subtitle": "Real-world applications of AI across finance and operations.",
+    "fraud": {
+      "title": "Fraud Detection in FinTech",
+      "desc": "Deploy anomaly detection and graph-based ML to identify and prevent fraudulent transactions in real time."
+    },
+    "risk": {
+      "title": "Credit Risk Scoring",
+      "desc": "Improve lending decisions with explainable models that evaluate probability of default and risk exposure."
+    },
+    "support": {
+      "title": "AI Customer Support",
+      "desc": "Automate Tier-1 queries with chatbots and route complex tickets with intent classification."
+    }
+  },
+  "products": {
+    "title": "AI Products",
+    "subtitle": "Out-of-the-box AI solutions to accelerate your operations.",
+    "helpdesk": {
+      "title": "AI Helpdesk Assistant",
+      "desc": "A multilingual agent that resolves common IT issues, generates tickets, and integrates with your ITSM."
+    },
+    "anomaly": {
+      "title": "Anomaly Detection Suite",
+      "desc": "Detect unusual patterns across transactions, logs, and metrics with configurable thresholds."
+    },
+    "docintel": {
+      "title": "Document Intelligence",
+      "desc": "OCR and extraction for invoices, IDs, and forms with validation and export pipelines."
+    }
   },
   "services": {
     "title": "Our Core Services",
