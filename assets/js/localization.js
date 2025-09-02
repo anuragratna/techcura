@@ -9,8 +9,11 @@ async function loadTranslations(lang) {
 function applyTranslations(translations) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        const translation = key.split('.').reduce((obj, k) => (obj && obj[k] !== 'undefined') ? obj[k] : key, translations);
-        if (translation !== key) {
+        const translation = key
+            .split('.')
+            .reduce((obj, k) => (obj && typeof obj === 'object' && Object.prototype.hasOwnProperty.call(obj, k)) ? obj[k] : undefined, translations);
+
+        if (typeof translation === 'string') {
             element.textContent = translation;
         }
     });
