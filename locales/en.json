@@ -35,6 +35,16 @@
       "desc": "Automate Tier-1 queries with chatbots and route complex tickets with intent classification."
     }
   },
+  "caseStudies.jan2025": {
+    "date": "January 2025",
+    "title": "Standing up IT for a Dutch mining company",
+    "desc": "End-to-end office launch: network, identity, endpoints and collaboration—followed by steady-state ITSM across incident, request, change and asset management."
+  },
+  "caseStudies.jun2025": {
+    "date": "June 2025",
+    "title": "Azure AD and Asset Management for an energy trader",
+    "desc": "Hardened Azure AD, automated join/leave processes, and unified device inventory and CMDB to support rapid growth and audit-ready operations."
+  },
   "products": {
     "title": "AI Products",
     "subtitle": "Out-of-the-box AI solutions to accelerate your operations.",

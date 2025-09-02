@@ -35,6 +35,16 @@
       "desc": "Automatiseer Tier-1 vragen met chatbots en routeer complexe tickets met intentieclassificatie."
     }
   },
+  "caseStudies.jan2025": {
+    "date": "januari 2025",
+    "title": "IT opzetten voor een Nederlands mijnbouwbedrijf",
+    "desc": "End-to-end kantoorlancering: netwerk, identiteit, endpoints en samenwerking—gevolgd door steady-state ITSM voor incident-, verzoek-, wijzigings- en assetbeheer."
+  },
+  "caseStudies.jun2025": {
+    "date": "juni 2025",
+    "title": "Azure AD en Asset Management voor een energiehandelaar",
+    "desc": "Gehard Azure AD, geautomatiseerde join/leave-processen en een uniforme apparaat-inventaris en CMDB ter ondersteuning van snelle groei en auditklare operaties."
+  },
   "products": {
     "title": "AI-producten",
     "subtitle": "Kant-en-klare AI-oplossingen om uw operaties te versnellen.",
