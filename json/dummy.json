@@ -1,0 +1,339 @@
+{
+    "name": "S&P 500 Daily Gainers Report",
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "triggerAtHour": 22,
+                "unit": "days",
+                "daysOfWeek": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          "timezone": "America/New_York"
+        },
+        "id": "278e1a17-3d3f-40e1-a0a4-37f0060938da",
+        "name": "Run After Market Close",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          480,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://financialmodelingprep.com/api/v3/sp500_constituent",
+          "options": {},
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "YOUR_FMP_API_KEY"
+              }
+            ]
+          }
+        },
+        "id": "e4c5b161-12c8-479e-a844-046ca9f69748",
+        "name": "Get S&P 500 List",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.1,
+        "position": [
+          700,
+          220
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://financialmodelingprep.com/api/v3/stock_market/gainers",
+          "options": {},
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "YOUR_FMP_API_KEY"
+              }
+            ]
+          }
+        },
+        "id": "55c4d29f-0c46-4448-b4eb-31b34e2ab903",
+        "name": "Get Market Gainers",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.1,
+        "position": [
+          700,
+          460
+        ]
+      },
+      {
+        "parameters": {
+          "data1": "={{ $('Get S&P 500 List').item.json }}",
+          "data2": "={{ $('Get Market Gainers').item.json }}",
+          "key1": "symbol",
+          "key2": "symbol",
+          "join": "inner"
+        },
+        "id": "584988e0-0720-410a-8456-912f2c253846",
+        "name": "Merge S&P 500 & Gainers",
+        "type": "n8n-nodes-base.merge",
+        "typeVersion": 2.2,
+        "position": [
+          920,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "limit",
+          "limit": 20,
+          "options": {
+            "sort": {
+              "field": "changesPercentage",
+              "direction": "desc"
+            }
+          }
+        },
+        "id": "1d8bf629-6799-4d9f-9276-8041d8e13636",
+        "name": "Sort & Limit Top 20",
+        "type": "n8n-nodes-base.itemLists",
+        "typeVersion": 2,
+        "position": [
+          1120,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "batchSize": 1,
+          "options": {}
+        },
+        "id": "2dfb414f-8086-455c-9c98-444a70650d4d",
+        "name": "Loop Over Each Stock",
+        "type": "n8n-nodes-base.splitInBatches",
+        "typeVersion": 2,
+        "position": [
+          1320,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "url": "=https://financialmodelingprep.com/api/v3/stock_news?limit=3&tickers={{ $json.symbol }}",
+          "options": {},
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "YOUR_FMP_API_KEY"
+              }
+            ]
+          }
+        },
+        "id": "31b6cc6e-947b-4022-bb9a-0e957519e917",
+        "name": "Get Stock News",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.1,
+        "position": [
+          1520,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "mode": "chat",
+          "model": "gpt-4o",
+          "prompt": "=You are a financial analyst. The stock {{ $('Loop Over Each Stock').item.json.name }} ({{ $('Loop Over Each Stock').item.json.symbol }}) increased by {{ $('Loop Over Each Stock').item.json.changesPercentage.toFixed(2) }}% today.\n\nBased ONLY on the recent news headlines provided below, write a concise, one-sentence reason (max 25 words) for the stock's price increase. Start the reason with an emoji (💡, 🚀, or ✅).\n\nNews:\n{{ JSON.stringify($json) }}\n\nIf the news does not provide a clear reason, state that the rally is linked to broader market sentiment or sector-specific trends.",
+          "options": {}
+        },
+        "id": "e0a4f529-6887-4de0-bd91-0373e9eb0c3f",
+        "name": "Generate AI Reasoning",
+        "type": "n8n-nodes-base.openAi",
+        "typeVersion": 1,
+        "position": [
+          1720,
+          340
+        ],
+        "credentials": {
+          "openAiApi": {
+            "id": "YOUR_OPENAI_CREDENTIAL_ID",
+            "name": "OpenAI account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const stockData = $items('Loop Over Each Stock')[0].json;\nconst aiReasoning = $items('Generate AI Reasoning')[0].json.choices[0].message.content;\n\nconst percentage = `+${stockData.changesPercentage.toFixed(1)}%`;\n\n$items[0].json.formattedLine = `${stockData.symbol} (${stockData.name}) ${percentage}\\n    ${aiReasoning}`;\n\nreturn $items[0];"
+        },
+        "id": "c1f60046-24c6-4d2a-9e32-2d1f4ed0a0f5",
+        "name": "Format Report Line",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1920,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "aggregate",
+          "fieldName": "formattedLine",
+          "options": {
+            "separator": "\\n\\n"
+          }
+        },
+        "id": "a9354859-99f6-4352-be79-7a31ac5f2757",
+        "name": "Aggregate Results",
+        "type": "n8n-nodes-base.itemLists",
+        "typeVersion": 2,
+        "position": [
+          2120,
+          340
+        ]
+      },
+      {
+        "parameters": {
+          "channel": "YOUR_SLACK_CHANNEL",
+          "text": "=🚀 *S&P 500 Daily Gainers Report - {{ new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}*\n\n{{ $json.aggregatedText }}"
+        },
+        "id": "0d54f5c0-101a-4c9f-85d8-04f762696acb",
+        "name": "Send to Slack",
+        "type": "n8n-nodes-base.slack",
+        "typeVersion": 2,
+        "position": [
+          2320,
+          340
+        ],
+        "credentials": {
+          "slackApi": {
+            "id": "YOUR_SLACK_CREDENTIAL_ID",
+            "name": "Slack account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Run After Market Close": {
+        "main": [
+          [
+            {
+              "node": "Get S&P 500 List",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Get Market Gainers",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get S&P 500 List": {
+        "main": [
+          [
+            {
+              "node": "Merge S&P 500 & Gainers",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get Market Gainers": {
+        "main": [
+          [
+            {
+              "node": "Merge S&P 500 & Gainers",
+              "type": "main",
+              "index": 1
+            }
+          ]
+        ]
+      },
+      "Merge S&P 500 & Gainers": {
+        "main": [
+          [
+            {
+              "node": "Sort & Limit Top 20",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Sort & Limit Top 20": {
+        "main": [
+          [
+            {
+              "node": "Loop Over Each Stock",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Loop Over Each Stock": {
+        "main": [
+          [
+            {
+              "node": "Get Stock News",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get Stock News": {
+        "main": [
+          [
+            {
+              "node": "Generate AI Reasoning",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Generate AI Reasoning": {
+        "main": [
+          [
+            {
+              "node": "Format Report Line",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Format Report Line": {
+        "main": [
+          [
+            {
+              "node": "Aggregate Results",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Aggregate Results": {
+        "main": [
+          [
+            {
+              "node": "Send to Slack",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    }
+  }
