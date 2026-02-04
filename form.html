@@ -23,7 +23,10 @@
         <div class="container">
             <nav>
                 <div class="brand-wrapper">
-                    <a href="/index.html" class="brand">Techcura</a>
+                    <a href="/index.html" class="brand">
+                        <img src="assets/images/t_logo.png" alt="Techcura Logo" class="logo-img">
+                        <span>Techcura</span>
+                    </a>
                     <p class="brand-tagline">Your Complete IT Partner.</p>
                 </div>
                 <div class="nav-links standalone">
@@ -82,10 +85,59 @@
     </footer>
 
     <script>
-        // Use a simple check for form submission success if directed back here
+        const contactForm = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMsg');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Success
+                        contactForm.style.display = 'none';
+                        successMsg.style.display = 'block';
+
+                        // Wait 3 seconds then redirect
+                        setTimeout(() => {
+                            window.location.href = '/index.html';
+                        }, 3000);
+                    } else {
+                        // Error handling
+                        const data = await response.json();
+                        alert(data.errors ? data.errors.map(err => err.message).join(", ") : "Oops! There was a problem submitting your form");
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit Inquiry';
+                    }
+                } catch (error) {
+                    alert("Oops! There was a problem submitting your form");
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Submit Inquiry';
+                }
+            });
+        }
+
+        // Keep the success parameter check for direct redirects if any
         if (window.location.search.includes('success=true')) {
-            document.getElementById('successMsg').style.display = 'block';
-            document.getElementById('contactForm').style.display = 'none';
+            successMsg.style.display = 'block';
+            if (contactForm) contactForm.style.display = 'none';
+            setTimeout(() => {
+                window.location.href = '/index.html';
+            }, 3000);
         }
     </script>
 </body>
