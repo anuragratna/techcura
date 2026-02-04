@@ -25,20 +25,3 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 You'll need a modern web browser and a way to serve the files locally. Using Python's built-in HTTP server is a straightforward option.
-
-### Installation & Running Locally
-
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/anuragratna/techcura.git
-    ```
-2.  **Navigate to the project directory:**
-    ```sh
-    cd techcura
-    ```
-3.  **Start a local web server.** If you have Python installed, you can use:
-    ```sh
-    python3 -m http.server 8000
-    ```
-4.  **View the website:**
-    Open your web browser and go to `http://localhost:8000`.
