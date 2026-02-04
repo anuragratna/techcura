@@ -9,7 +9,7 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // API Routes
 app.get('/api/articles', (req, res) => {
@@ -34,7 +34,7 @@ app.get('/api/casestudies', (req, res) => {
 
 // Fallback to index.html
 app.use((req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
