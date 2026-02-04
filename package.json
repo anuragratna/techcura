@@ -1,0 +1,26 @@
+{
+  "name": "techcura",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for the official website of Techcura, an IT services company. The website is a modern, responsive, and localized static site built to showcase the company's services and provide a point of contact for inquiries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuragratna/techcura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anuragratna/techcura/issues"
+  },
+  "homepage": "https://github.com/anuragratna/techcura#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Expert IT Support & Solutions in the Netherlands | Techcura",
-    "description": "Techcura offers 24/7 expert IT support, cybersecurity, and infrastructure solutions for SMEs in the Netherlands. Simplify your IT and boost productivity.",
-    "keywords": "IT support Netherlands, SME IT services, cybersecurity solutions, managed IT services, IT infrastructure, tech support"
+    "title": "Expert IT Support & Maintenance in Benelux | Techcura",
+    "description": "Techcura offers 24/7 expert IT support, maintenance, cybersecurity, and infrastructure solutions for customers across Benelux.",
+    "keywords": "IT maintenance Benelux, IT support Belgium, IT support Netherlands, SME IT services, managed IT services"
   },
   "navigation": {
     "brandTagline": "Your Complete IT Partner.",
@@ -11,12 +11,14 @@
     "caseStudies": "Case Studies",
     "products": "Products",
     "howItWorks": "How It Works",
+    "articles": "Articles",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "booking": "Book Call"
   },
   "hero": {
-    "title": "Your IT, Simplified. Secure. Productive.",
-    "subtitle": "Techcura offers 24/7 expert IT support and infrastructure solutions for SMEs in the Netherlands, ensuring smooth and secure operations.",
+    "title": "IT Maintenance & Support Across Benelux",
+    "subtitle": "Our expert team provides onsite and remote IT support across the Benelux region, managing and maintaining your infrastructure at a guaranteed low price with the best quality.",
     "button": "Explore Our Services"
   },
   "caseStudies": {
@@ -63,7 +65,7 @@
   },
   "services": {
     "title": "Our Core Services",
-    "subtitle": "A Tiered Approach to Fit Your Business Needs",
+    "subtitle": "Onsite & Remote Support at a Guaranteed Low Price",
     "tier1Title": "Tier 1: Basic IT Support",
     "tier1Item1": "IT Support & Helpdesk Services (remote and onsite)",
     "tier1Item2": "Office & Facility IT Support (Wi-Fi, cabling, printers, etc.)",
@@ -86,6 +88,10 @@
     "procurementTitle": "IT Procurement Services",
     "procurementDesc": "From laptops and routers to licensed software and cloud services, we help you choose the right technology, negotiate with vendors, and manage procurement logistics."
   },
+  "booking": {
+    "title": "Book a Consultation",
+    "subtitle": "Schedule a 15-minute call with our IT experts to discuss your needs."
+  },
   "howItWorks": {
     "title": "How Techcura Works For You",
     "step1Title": "Initial Contact & Consultation",
@@ -97,9 +103,20 @@
     "step4Title": "Ongoing continuous support & Monitoring",
     "step4Desc": "Benefit from continuous monitoring and expert support to ensure your IT environment runs smoothly and securely."
   },
+  "articles": {
+    "title": "Latest Insights",
+    "subtitle": "Stay updated with the latest trends in IT and cybersecurity.",
+    "readMore": "Read More",
+    "art1Title": "The Future of Cybersecurity",
+    "art1Desc": "Explore how AI is shaping the future of digital security and what it means for your business.",
+    "art2Title": "Cloud Migration Strategies",
+    "art2Desc": "A comprehensive guide to moving your infrastructure to the cloud without downtime.",
+    "art3Title": "IT Support for Remote Teams",
+    "art3Desc": "Best practices for managing and supporting a distributed workforce effectively."
+  },
   "about": {
     "title": "About Techcura",
-    "description": "Techcura is a modern IT support and infrastructure solutions company based in the Netherlands, dedicated to helping SMEs run smoothly and securely. We offer 24/7 expert support across hardware, networking, application maintenance, cybersecurity, and server operations. Our end-to-end services are designed to eliminate IT headaches, improve performance, and ensure your business stays connected, protected, and productive."
+    "description": "Techcura is a leading IT maintenance and support provider serving customers across the Benelux region. Our expert team of IT specialists manages and maintains your entire IT infrastructure, from on-premise servers to cloud environments. We are dedicated to providing top-notch support and solutions that keep your business running smoothly, securely, and efficiently."
   },
   "inquiry": {
     "title": "Have an Inquiry?",
@@ -120,4 +137,4 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   }
-} 
+}

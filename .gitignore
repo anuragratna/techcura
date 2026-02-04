@@ -1,2 +1,4 @@
-# Ignore the services text file
-services.txt 
+node_modules/
+techcura.db
+.DS_Store
+package-lock.json

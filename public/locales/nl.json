@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Deskundige IT-ondersteuning & Oplossingen in Nederland | Techcura",
-    "description": "Techcura biedt 24/7 deskundige IT-ondersteuning, cybersecurity en infrastructuuroplossingen voor het MKB in Nederland. Vereenvoudig uw IT en verhoog de productiviteit.",
-    "keywords": "IT-ondersteuning Nederland, MKB IT-diensten, cybersecurity-oplossingen, beheerde IT-diensten, IT-infrastructuur, technische ondersteuning"
+    "title": "Deskundige IT-ondersteuning & Onderhoud in de Benelux | Techcura",
+    "description": "Techcura biedt 24/7 deskundige IT-ondersteuning, onderhoud, cybersecurity en infrastructuuroplossingen voor klanten in de hele Benelux.",
+    "keywords": "IT-onderhoud Benelux, IT-ondersteuning België, IT-ondersteuning Nederland, MKB IT-diensten, beheerde IT-diensten"
   },
   "navigation": {
     "brandTagline": "Uw Complete IT-Partner.",
@@ -11,12 +11,14 @@
     "caseStudies": "Praktijkcases",
     "products": "Producten",
     "howItWorks": "Hoe het werkt",
+    "articles": "Artikelen",
     "about": "Over ons",
-    "contact": "Contact"
+    "contact": "Contact",
+    "booking": "Afspraak"
   },
   "hero": {
-    "title": "Uw IT, Vereenvoudigd. Veilig. Productief.",
-    "subtitle": "Techcura biedt 24/7 deskundige IT-ondersteuning en infrastructuuroplossingen voor het MKB in Nederland, voor soepele en veilige operaties.",
+    "title": "IT-onderhoud & Ondersteuning in de Benelux",
+    "subtitle": "Ons deskundige team biedt IT-ondersteuning op locatie en op afstand in de hele Benelux, waarbij we uw infrastructuur beheren en onderhouden tegen een gegarandeerd lage prijs met de beste kwaliteit.",
     "button": "Ontdek Onze Diensten"
   },
   "caseStudies": {
@@ -63,7 +65,7 @@
   },
   "services": {
     "title": "Onze Kerndiensten",
-    "subtitle": "Een Gelaagde Aanpak voor Uw Bedrijfsbehoeften",
+    "subtitle": "Ondersteuning op Locatie & op Afstand tegen een Gegarandeerd Lage Prijs",
     "tier1Title": "Niveau 1: Basis IT-ondersteuning",
     "tier1Item1": "IT-ondersteuning & Helpdeskdiensten (op afstand en op locatie)",
     "tier1Item2": "Kantoor- & Facilitaire IT-ondersteuning (Wi-Fi, bekabeling, printers, etc.)",
@@ -84,7 +86,11 @@
     "assetManagementTitle": "IT Asset Management",
     "assetManagementDesc": "Inventaris-tracking, levenscyclusbeheer, garantie-tracking en gebruiksmonitoring van uw IT-assets. Krijg volledig inzicht en controle over uw hardware en software.",
     "procurementTitle": "IT-inkoopdiensten",
-    "procurementDesc": "Van laptops en routers tot gelicentieerde software en clouddiensten, wij helpen u de juiste technologie te kiezen, met leveranciers te onderhandelen en de inkooplogistiek te beheren."
+    "procurementDesc": "Van laptops and routers tot gelicentieerde software en clouddiensten, wij helpen u de juiste technologie te kiezen, met leveranciers te onderhandelen en de inkooplogistiek te beheren."
+  },
+  "booking": {
+    "title": "Boek een Consult",
+    "subtitle": "Plan een gesprek van 15 minuten met onze IT-experts om uw behoeften te bespreken."
   },
   "howItWorks": {
     "title": "Hoe Techcura Voor U Werkt",
@@ -97,9 +103,20 @@
     "step4Title": "Doorlopende continue ondersteuning & Monitoring",
     "step4Desc": "Profiteer van continue monitoring en 24/7 deskundige ondersteuning om ervoor te zorgen dat uw IT-omgeving soepel en veilig draait."
   },
+  "articles": {
+    "title": "Nieuwste Inzichten",
+    "subtitle": "Blijf op de hoogte van de laatste trends in IT en cybersecurity.",
+    "readMore": "Lees Meer",
+    "art1Title": "De Toekomst van Cybersecurity",
+    "art1Desc": "Ontdek hoe AI de toekomst van digitale veiligheid vormgeeft en wat dit betekent voor uw bedrijf.",
+    "art2Title": "Cloud Migratie Strategieën",
+    "art2Desc": "Een uitgebreide gids voor het verplaatsen van uw infrastructuur naar de cloud zonder downtime.",
+    "art3Title": "IT-ondersteuning voor Externe Teams",
+    "art3Desc": "Beste praktijken voor het effectief beheren en ondersteunen van een verspreid personeelsbestand."
+  },
   "about": {
     "title": "Over Techcura",
-    "description": "Techcura is een modern IT-ondersteunings- en infrastructuurbedrijf gevestigd in Nederland, toegewijd aan het helpen van het MKB om soepel en veilig te functioneren. Wij bieden 24/7 deskundige ondersteuning op het gebied van hardware, netwerken, applicatieonderhoud, cybersecurity en serverbeheer. Onze end-to-end diensten zijn ontworpen om IT-hoofdpijn te elimineren, prestaties te verbeteren en ervoor te zorgen dat uw bedrijf verbonden, beschermd en productief blijft."
+    "description": "Techcura is een vooraanstaande leverancier van IT-onderhoud en ondersteuning voor klanten in de gehele Benelux. Ons expertteam van IT-specialisten beheert en onderhoudt uw volledige IT-infrastructuur, van servers op locatie tot cloudomgevingen. Wij zijn toegewijd aan het leveren van hoogwaardige ondersteuning en oplossingen die uw bedrijf soepel, veilig en efficiënt laten draaien."
   },
   "inquiry": {
     "title": "Heeft u een vraag?",
@@ -120,4 +137,4 @@
     "privacy": "Privacybeleid",
     "terms": "Servicevoorwaarden"
   }
-} 
+}

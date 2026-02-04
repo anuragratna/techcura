@@ -19,19 +19,21 @@ function applyTranslations(translations) {
     });
 
     // Handle meta tags
-    document.title = translations.meta.title;
-    document.querySelector('meta[name="description"]').setAttribute('content', translations.meta.description);
-    document.querySelector('meta[name="keywords"]').setAttribute('content', translations.meta.keywords);
+    if (translations.meta) {
+        document.title = translations.meta.title;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', translations.meta.description);
+        const metaKeys = document.querySelector('meta[name="keywords"]');
+        if (metaKeys) metaKeys.setAttribute('content', translations.meta.keywords);
+    }
 }
 
 function updateActiveButton(lang) {
     document.querySelectorAll('.lang-switcher button').forEach(btn => {
         if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('font-semibold', 'text-primary');
-            btn.classList.remove('text-secondary');
+            btn.classList.add('active');
         } else {
-            btn.classList.remove('font-semibold', 'text-primary');
-            btn.classList.add('text-secondary');
+            btn.classList.remove('active');
         }
     });
 }
@@ -45,7 +47,6 @@ async function setLanguage(lang) {
         updateActiveButton(lang);
     } catch (error) {
         console.error(error);
-        // Fallback to English if the chosen language fails
         if (lang !== 'en') {
             await setLanguage('en');
         }
@@ -56,13 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const preferredLanguage = localStorage.getItem('preferredLanguage');
     const browserLanguage = navigator.language.split('-')[0];
     const initialLang = preferredLanguage || (['en', 'nl'].includes(browserLanguage) ? browserLanguage : 'en');
-    
+
     document.querySelectorAll('.lang-switcher button').forEach(button => {
         button.addEventListener('click', (event) => {
-            const lang = event.target.getAttribute('data-lang');
+            const lang = event.currentTarget.getAttribute('data-lang');
             setLanguage(lang);
         });
     });
 
     setLanguage(initialLang);
-}); 
+
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
