@@ -130,10 +130,26 @@
     "email": "connect@techcura.services",
     "phoneLabel": "Telefoon:",
     "phone": "+31 683540581",
-    "inquiryButton": "Ga naar Aanvraagformulier"
+    "inquiryButton": "Ga naar Aanvraagformulier",
+    "intro": "Bel direct of laat je gegevens achter.",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "company": "Bedrijfsnaam",
+    "phonePlaceholder": "Telefoonnummer",
+    "emailPlaceholder": "E-mailadres",
+    "messagePlaceholder": "Stel je vraag",
+    "callUs": "Bel ons",
+    "sendEmail": "Stuur een e-mail",
+    "directContact": "Direct contact",
+    "founderRole": "Oprichter & Lead Consultant",
+    "kvk": "KVK",
+    "addressTitle": "Kantooradres",
+    "addressLine1": "Audrey Hepburnstraat 44",
+    "addressLine2": "1325NN Almere",
+    "addressLine3": "Nederland"
   },
   "footer": {
-    "copyright": "&copy; 2025 Techcura. Alle rechten voorbehouden.",
+    "copyright": "&copy; 2026 Techcura. Alle rechten voorbehouden.",
     "privacy": "Privacybeleid",
     "terms": "Servicevoorwaarden"
   }

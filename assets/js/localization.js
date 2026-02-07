@@ -18,6 +18,17 @@ function applyTranslations(translations) {
         }
     });
 
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const translation = key
+            .split('.')
+            .reduce((obj, k) => (obj && typeof obj === 'object' && Object.prototype.hasOwnProperty.call(obj, k)) ? obj[k] : undefined, translations);
+
+        if (typeof translation === 'string') {
+            element.setAttribute('placeholder', translation);
+        }
+    });
+
     // Handle meta tags
     if (translations.meta) {
         document.title = translations.meta.title;

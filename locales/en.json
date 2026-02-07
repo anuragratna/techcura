@@ -130,10 +130,26 @@
     "email": "connect@techcura.services",
     "phoneLabel": "Phone:",
     "phone": "+31 683540581",
-    "inquiryButton": "Go to Inquiry Form"
+    "inquiryButton": "Go to Inquiry Form",
+    "intro": "Call directly or leave your details below.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "company": "Company name",
+    "phonePlaceholder": "Phone number",
+    "emailPlaceholder": "Email address",
+    "messagePlaceholder": "Your message",
+    "callUs": "Call us",
+    "sendEmail": "Send an email",
+    "directContact": "Direct Contact",
+    "founderRole": "Founder & Lead Consultant",
+    "kvk": "Chamber of Commerce (KVK)",
+    "addressTitle": "Office Address",
+    "addressLine1": "44, Audrey Hepburnstraat",
+    "addressLine2": "1325NN Almere",
+    "addressLine3": "The Netherlands"
   },
   "footer": {
-    "copyright": "&copy; 2025 Techcura. All rights reserved.",
+    "copyright": "&copy; 2026 Techcura. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   }

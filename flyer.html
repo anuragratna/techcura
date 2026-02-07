@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcura - IT Services Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #141929 100%);
+            color: #ffffff;
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 40px 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Background decoration */
+        .bg-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+
+        .bg-circle-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -150px;
+        }
+
+        .bg-circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -100px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 16px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .brand-info h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #3b82f6;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .website {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .hero h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+            flex: 1;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 1.5px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 24px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+
+        .service-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            font-size: 13px;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .service-card ul li {
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00d2ff;
+            font-weight: 900;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1.5px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+        }
+
+        .why-choose h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefit::before {
+            content: '●';
+            color: #3b82f6;
+            font-size: 16px;
+        }
+
+        /* Footer CTA */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 2px solid rgba(59, 130, 246, 0.3);
+            gap: 30px;
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            background: #ffffff;
+            padding: 6px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .qr-label {
+            font-size: 10px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .contact-item strong {
+            color: #ffffff;
+            min-width: 60px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-decoration">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="assets/images/t_logo.png" alt="Techcura Logo">
+                </div>
+                <div class="brand-info">
+                    <h1>Techcura</h1>
+                    <div class="tagline">Your Complete IT Partner</div>
+                </div>
+            </div>
+            <div class="website">techcura.services</div>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero">
+            <h2>IT Maintenance & Support Across Benelux</h2>
+            <p>24/7 expert IT maintenance and support for businesses across the Benelux region. We manage and maintain
+                your IT infrastructure seamlessly, so you can focus on what matters most.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="services">
+            <div class="service-card">
+                <h3>Tier 1: Basic IT Support</h3>
+                <ul>
+                    <li>IT Support & Helpdesk Services</li>
+                    <li>Office & Facility IT Support</li>
+                    <li>First-line technical troubleshooting</li>
+                    <li>User management & onboarding</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Tier 2: Infrastructure Support</h3>
+                <ul>
+                    <li>Infrastructure Management</li>
+                    <li>Network and device configuration</li>
+                    <li>Active Directory maintenance</li>
+                    <li>Onsite infrastructure monitoring</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Tier 3: Advanced IT & Security</h3>
+                <ul>
+                    <li>Advanced Server Support</li>
+                    <li>Cloud & Backup Solutions</li>
+                    <li>Cybersecurity Services</li>
+                    <li>Hybrid environment support</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose">
+            <h3>Why Choose Techcura?</h3>
+            <div class="benefits">
+                <div class="benefit">24/7 Expert Support</div>
+                <div class="benefit">Benelux-wide Coverage</div>
+                <div class="benefit">Scalable Solutions</div>
+                <div class="benefit">Proactive Monitoring</div>
+                <div class="benefit">Competitive Pricing</div>
+                <div class="benefit">Rapid Response Times</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> connect@techcura.services
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> +31 683540581
+                </div>
+                <div class="contact-item">
+                    <strong>KVK:</strong> 98344579
+                </div>
+            </div>
+            <div class="qr-section">
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://techcura.services"
+                        alt="Scan for website">
+                </div>
+                <div class="qr-label">Scan to visit our website</div>
+            </div>
+            <a href="https://techcura.services" class="cta-button">Get Started Today</a>
+        </div>
+    </div>
+</body>
+
+</html>
