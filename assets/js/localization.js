@@ -52,6 +52,8 @@ function updateActiveButton(lang) {
 async function setLanguage(lang) {
     try {
         const translations = await loadTranslations(lang);
+        window.currentTranslations = translations;
+        window.applyTranslations = applyTranslations;
         applyTranslations(translations);
         localStorage.setItem('preferredLanguage', lang);
         document.documentElement.lang = lang;
