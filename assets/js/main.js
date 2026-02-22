@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and render articles
     const articlesContainer = document.getElementById('articles-container');
     if (articlesContainer) {
-        fetch('/api/articles')
+        fetch('json/articles.json')
             .then(response => response.json())
-            .then(json => {
-                const articles = json.data;
+            .then(articles => {
+
                 articles.forEach(article => {
                     const card = document.createElement('a');
                     card.href = article.link;
