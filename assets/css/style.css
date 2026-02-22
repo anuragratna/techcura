@@ -195,9 +195,23 @@ nav .brand {
 }
 
 nav .brand .logo-img {
-    height: 40px;
+    height: 42px;
     width: auto;
-    filter: drop-shadow(0 0 8px var(--primary-glow));
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 4px;
+    transition: var(--transition);
+}
+
+nav .brand .logo-img:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 nav .brand-tagline {
@@ -484,15 +498,120 @@ p.section-subtitle {
     margin-top: 2px;
 }
 
-/* How It Works */
-#how-it-works {
-    background: rgba(255, 255, 255, 0.02);
+/* How It Works Flow */
+.flow-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    padding: 2rem 0;
 }
 
-#how-it-works .card {
-    border-radius: 100px;
-    /* Circular steps? Or just rounded? Let's go with 32px */
+.flow-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    background: var(--bg-surface);
+    padding: 3rem 2rem;
     border-radius: 32px;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.flow-step:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    background: var(--bg-surface-hover);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.step-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px var(--primary-glow);
+    position: relative;
+}
+
+.step-badge::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    opacity: 0.3;
+}
+
+.flow-line {
+    flex: 0.5;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    margin-top: 3.5rem;
+    opacity: 0.3;
+    position: relative;
+}
+
+.flow-line::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.flow-step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.flow-step p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .flow-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flow-line {
+        width: 2px;
+        height: 50px;
+        margin: 0;
+        background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+
+    .flow-line::after {
+        content: '↓';
+        right: auto;
+        left: 50%;
+        bottom: -20px;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+    .flow-step {
+        width: 100%;
+        max-width: 500px;
+    }
 }
 
 /* Articles */

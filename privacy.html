@@ -5,7 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Techcura</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description"
+        content="Privacy Policy for Techcura Services - Learn how we collect, use, and protect your data.">
+
+    <link rel="icon" type="image/png" href="assets/images/t_logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <style>
+        .legal-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .legal-card {
+            background: var(--bg-surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 4rem;
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+        }
+
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .legal-section h2 span {
+            font-size: 1.2rem;
+            opacity: 0.5;
+            color: var(--text-main);
+        }
+
+        .legal-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .legal-section ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+            list-style: disc;
+            color: var(--text-muted);
+        }
+
+        .legal-section ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .last-updated {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .legal-card {
+                padding: 2.5rem 1.5rem;
+                margin: -80px 1rem 50px;
+                border-radius: 24px;
+            }
+
+            .legal-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,62 +103,134 @@
                         <img src="assets/images/t_logo.png" alt="Techcura Logo" class="logo-img">
                         <span>Techcura</span>
                     </a>
+                    <p class="brand-tagline">Your Complete IT Partner.</p>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html#booking" class="cta-button"
+                        style="padding: 0.5rem 1.2rem; font-size: 0.9rem; animation: none;">Book Call</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="container" style="padding: 4rem 1rem;">
-        <h1>Privacy Policy</h1>
-        <p><strong>Last Updated: 2026</strong></p>
-
-        <section>
-            <h2>1. Information We Collect</h2>
-            <p>We may collect personal information such as name, email address, phone number, and company details when
-                you use our website or services.</p>
+    <main>
+        <!-- Dedicated Hero for Legal Pages -->
+        <section
+            style="padding: 10rem 0 12rem; background: radial-gradient(circle at center, var(--primary-glow) 0%, transparent 70%);">
+            <div class="container" style="text-align: center;">
+                <h1 style="font-size: clamp(3rem, 10vw, 5rem); margin-bottom: 1rem;" class="text-gradient">Privacy
+                    Policy</h1>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">We value your privacy and are committed to
+                    protecting your personal data in compliance with GDPR regulations.</p>
+            </div>
         </section>
 
-        <section>
-            <h2>2. How We Use Your Information</h2>
-            <p>We use the information we collect to provide, maintain, and improve our services, communicate with you,
-                and personalize your experience.</p>
-        </section>
+        <div class="container">
+            <div class="legal-content">
+                <div class="legal-card">
+                    <span class="last-updated">Last Updated: February 2026</span>
 
-        <section>
-            <h2>3. Sharing of Information</h2>
-            <p>We do not share your personal information with third parties except as necessary to provide our services
-                or as required by law.</p>
-        </section>
+                    <div class="legal-section">
+                        <p>At Techcura, we are committed to protecting your privacy. This Privacy Policy explains how
+                            your personal information is collected, used, and disclosed by Techcura ("we," "us," or
+                            "our").</p>
+                        <p>By accessing or using our website and services, you signify that you have read, understood,
+                            and agree to our collection, storage, use, and disclosure of your personal information as
+                            described in this Privacy Policy.</p>
+                    </div>
 
-        <section>
-            <h2>4. Security</h2>
-            <p>We implement reasonable security measures to protect your personal information from unauthorized access,
-                use, or disclosure.</p>
-        </section>
+                    <div class="legal-section">
+                        <h2><span>01</span> Information We Collect</h2>
+                        <p>We collect information that you provide directly to us, as well as information about how you
+                            use our services. This includes:</p>
+                        <ul>
+                            <li><strong>Personal Identity:</strong> Name, job title, and company name.</li>
+                            <li><strong>Contact Details:</strong> Email address, phone number, and physical office
+                                address.</li>
+                            <li><strong>Technical Data:</strong> IP address, browser type, device information, and usage
+                                patterns through cookies and similar technologies.</li>
+                            <li><strong>Service Requests:</strong> Details about the IT infrastructure and support needs
+                                you share with us.</li>
+                        </ul>
+                    </div>
 
-        <section>
-            <h2>5. Your Choices</h2>
-            <p>You may opt-out of receiving promotional communications from us by following the instructions in those
-                messages.</p>
-        </section>
+                    <div class="legal-section">
+                        <h2><span>02</span> How We Use Your Information</h2>
+                        <p>We use the collected data for various purposes, including:</p>
+                        <ul>
+                            <li>To provide, maintain, and improve our IT support and maintenance services.</li>
+                            <li>To process and respond to your inquiries and support tickets.</li>
+                            <li>To send technical notices, updates, security alerts, and administrative messages.</li>
+                            <li>To monitor and analyze trends, usage, and activities in connection with our services.
+                            </li>
+                            <li>To comply with legal obligations and protect our rights.</li>
+                        </ul>
+                    </div>
 
-        <section>
-            <h2>6. Changes to This Policy</h2>
-            <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new
-                privacy policy on this page.</p>
-        </section>
+                    <div class="legal-section">
+                        <h2><span>03</span> Data Sharing and Disclosure</h2>
+                        <p>We do not sell your personal data. We may share your information only in the following
+                            circumstances:</p>
+                        <ul>
+                            <li><strong>Service Providers:</strong> With third-party vendors and consultants who perform
+                                services on our behalf (e.g., cloud hosting, CRM tools).</li>
+                            <li><strong>Legal Requirements:</strong> If required by law or in response to valid requests
+                                by public authorities (e.g., a court or government agency).</li>
+                            <li><strong>Business Transfers:</strong> In connection with any merger, sale of company
+                                assets, or acquisition of all or a portion of our business.</li>
+                        </ul>
+                    </div>
 
-        <section>
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at <a
-                    href="mailto:connect@techcura.services">connect@techcura.services</a>.</p>
-        </section>
+                    <div class="legal-section">
+                        <h2><span>04</span> Data Security</h2>
+                        <p>The security of your data is important to us. We implement industry-standard technical and
+                            organizational measures to protect your personal data against unauthorized access, loss, or
+                            alteration. However, no method of transmission over the Internet is 100% secure.</p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h2><span>05</span> Your Rights (GDPR)</h2>
+                        <p>As a resident of the Benelux region or the EU, you have certain rights under the General Data
+                            Protection Regulation (GDPR), including:</p>
+                        <ul>
+                            <li>The right to access, update, or delete the information we have on you.</li>
+                            <li>The right of rectification if your information is inaccurate.</li>
+                            <li>The right to object to our processing of your personal data.</li>
+                            <li>The right of restriction and data portability.</li>
+                            <li>The right to withdraw consent at any time.</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section">
+                        <h2><span>06</span> Cookies</h2>
+                        <p>Our website uses cookies to enhance your experience. You can instruct your browser to refuse
+                            all cookies or to indicate when a cookie is being sent. However, if you do not accept
+                            cookies, you may not be able to use some portions of our service.</p>
+                    </div>
+
+                    <div class="legal-section">
+                        <h2><span>07</span> Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy or our data practices, please reach out
+                            to us:</p>
+                        <p
+                            style="background: rgba(59, 130, 246, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px dashed var(--primary);">
+                            <strong>Email:</strong> <a
+                                href="mailto:connect@techcura.services">connect@techcura.services</a><br>
+                            <strong>Address:</strong> 44, Audrey Hepburnstraat, 1325NN Almere, Netherlands
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Techcura. All rights reserved.</p>
+                <p>2026 Techcura Services. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
@@ -80,6 +238,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

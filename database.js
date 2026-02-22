@@ -27,17 +27,17 @@ db.serialize(() => {
                 {
                     title: "Remote and Onsite Support: A Hybrid Approach",
                     description: "Discover how combining remote monitoring with onsite expertise provides the most robust IT support for your business.",
-                    link: "#"
+                    link: "remote-hybrid-support.html"
                 },
                 {
                     title: "Benefits of Outsourcing IT Services",
                     description: "Learn why outsourcing your IT needs can save costs, improve efficiency, and give you access to specialized expertise.",
-                    link: "#"
+                    link: "outsourcing-it-benefits.html"
                 },
                 {
                     title: "Ensuring Data Compliance in 2026",
                     description: "Stay ahead of regulatory changes with our guide to data privacy and compliance standards for the coming year.",
-                    link: "#"
+                    link: "data-compliance-2026.html"
                 },
                 {
                     title: "The Future of Cybersecurity",
